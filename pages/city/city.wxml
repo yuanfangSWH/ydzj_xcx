@@ -1,0 +1,36 @@
+<!--pages/city/city.wxml-->
+<topMOD></topMOD>
+<view class="top-chen">
+  <topMOD></topMOD>
+  <view class="search">
+    <image class="return" src="../../images/back.png" bindtap="return"></image>
+    <view class="shourq">
+      <image class="shous" src="../../images/luigjss.png"></image>
+      <input class="weui-input" confirm-type="search" focus="true" placeholder="输入城市名或拼音搜索" bindinput="inputSearch" />
+    </view>
+  </view>
+</view>
+<view class="baohcuos middle">
+  当前定位
+</view>
+<view class="yonlie middle">
+  <view class="weizhi" data-value="{{city_id}}" bindtap="xuanzeCS">{{locationData}}</view>
+</view>
+<view class="baohcuos middle">
+  热门城市
+</view>
+<view class="yonlie middle">
+  <view class="zhelis" wx:for="{{hotData}}" wx:key="index" data-value="{{item.id}}" bindtap="xuanzeCS">{{item.name}}
+  </view>
+</view>
+<view class="liexfx middle"></view>
+<!-- 城市 -->
+<view class="luokon middle" wx:for="{{cityData}}" wx:key="index" id="city{{item.first}}">
+  <view class="shouzm">{{item.first}}</view>
+  <view class="gbmeixg" wx:for="{{item.city}}" wx:key="index" wx:for-item="city" data-value="{{city.id}}"
+    bindtap="xuanzeCS">{{city.name}}</view>
+</view>
+<view class="kaobdxuanz">
+  <view class="limdwz" wx:for="{{cityData}}" wx:key="index" data-value="{{item.first}}" bindtap="jumpWZ">{{item.first}}
+  </view>
+</view>

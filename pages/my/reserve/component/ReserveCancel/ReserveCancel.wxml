@@ -1,0 +1,23 @@
+<mp-dialog title="选择取消订单的原因" show="{{active}}" bindbuttontap="handleReasonDialog" buttons="{{[{text: '取消'}, {text: '确认'}]}}">
+    <view class="dialog-content">
+      <view class="radio-item" data-index="0" bindtap="changeReason">
+        <span>买多/买错/不想要了</span>
+        <image wx:if="{{reasonIndex==0}}" class="radio" src="/images/checked.png"></image>
+        <image wx:else class="radio" src="/images/uncheck.png"></image>
+      </view>
+      <view class="radio-item" data-index="1" bindtap="changeReason">
+        <span>无法再预定时间内到场</span>
+        <image wx:if="{{reasonIndex==1}}" class="radio" src="/images/checked.png"></image>
+        <image wx:else class="radio" src="/images/uncheck.png"></image>
+      </view>
+      <view class="radio-item" data-index="2" bindtap="changeReason">
+        <span>其它</span>
+        <image wx:if="{{reasonIndex==2}}" class="radio" src="/images/checked.png"></image>
+        <image wx:else class="radio" src="/images/uncheck.png"></image>
+      </view>
+
+      
+      <textarea wx:if="{{reasonIndex==2}}" class="other-item" placeholder="请输入其他原因" model:value="{{reasonInfo}}" />
+      
+    </view>
+  </mp-dialog>

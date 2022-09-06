@@ -1,0 +1,253 @@
+<!--pages/details/details.wxml-->
+<topMOD></topMOD>
+<view class="top-chen">
+  <topMOD></topMOD>
+  <view class="bit">
+    <image class="return" src="../../images/back.png" bindtap="return"></image>
+  </view>
+</view>
+<view class="wodmeng middle">
+  <view class="tsdli">
+    <view class="spxmw" wx:if="{{video}}">
+      <image class="spxmwimg" src="../../images/hdptp2.png"></image>{{video.length}}
+    </view>
+    <view class="tpxmw" wx:if="{{album}}" bindtap="picture">
+      <image class="tpxmwimg" src="../../images/hdptp1.png"></image>{{album.length}}
+    </view>
+  </view>
+  <swiper class="swiper" indicator-dots="{{album>1?true:false}}" autoplay="false">
+    <swiper-item wx:for="{{video}}" wx:key="index">
+      <video class="ship" src="{{item.path}}" show-play-btn="{{true}}" controls></video>
+    </swiper-item>
+    <swiper-item wx:for="{{album}}" wx:key="index">
+      <image class="slideimg" src="{{item.path}}"></image>
+    </swiper-item>
+  </swiper>
+</view>
+<view class="buyonsk middle">
+  <view class="damok">
+    <view class="zgsbt">{{detailsData.name}}</view>
+    <view class="yousmy">
+      <view class="xingEX">
+        <image class="xinimg {{detailsData.score<1?'huise':''}}" src="../../images/dawjltb.png"></image>
+        <image class="xinimg {{detailsData.score<2?'huise':''}}" src="../../images/dawjltb.png"></image>
+        <image class="xinimg {{detailsData.score<3?'huise':''}}" src="../../images/dawjltb.png"></image>
+        <image class="xinimg {{detailsData.score<4?'huise':''}}" src="../../images/dawjltb.png"></image>
+        <image class="xinimg {{detailsData.score<5?'huise':''}}" src="../../images/dawjltb.png"></image>
+      </view>
+      <view class="xinji">{{detailsData.score}}.0</view>
+      <view class="xingy"></view>
+      <view class="feixut"><text>￥</text>{{(detailsData.basic_price/100)}}/人</view>
+    </view>
+    <view class="yingysj">营业时间：<text
+        wx:if="{{detailsData.business_start_time!='00:00'||detailsData.business_stop_time!='00:00'}}">{{detailsData.business_start_time}}-次日{{detailsData.business_stop_time}}</text><text
+        wx:if="{{detailsData.business_start_time=='00:00'&&detailsData.business_stop_time=='00:00'}}">24小时营业</text>
+    </view>
+    <view class="biaomk" wx:if="{{tagsData&&tagsData!=''}}">
+      <view class="biaoqianBox">
+        <view class="biaoq" wx:for="{{tagsData}}" wx:key="index">{{item}}</view>
+      </view>
+      <view class="baqjtou" bindtap="informationF">
+        <image class="jianths middle" src="../../images/Path.png"></image>
+      </view>
+    </view>
+    <image class="vrqjincss" wx:if="{{detailsData.vr}}" src="../../images/varquhjj.png" data-value="1" bindtap="jqqd">
+    </image>
+  </view>
+  <view class="dizhi">
+    <view class="ulw shuixin">
+      <image class="lujtz" src="../../images/luzhizj.png"></image>
+      <view class="diwz">{{detailsData.address}}</view>
+    </view>
+    <view class="ulw">
+      <view class="ljiljt">距离您 {{detailsData.distance}}</view>
+      <!-- <image class="dianhl" src="../../images/dhfa.png" bindtap="phoneBD"></image>
+      <view class="ljiljt" bindtap="phoneBD">电话</view> -->
+    </view>
+    <view class="fujtmk" bindtap="parkingF">
+      <image class="tccjloimg middle" src="../../images/fujintc.png"></image>
+      <view class="ltinm">附近停车场</view>
+    </view>
+  </view>
+</view>
+<view class="heixie" wx:if="{{first_coupon.is_show==1}}"></view>
+<view wx:if="{{first_coupon.is_first==1}}">
+  <view class="youhmk" wx:if="{{first_coupon.is_show==1}}">
+    <image class="sdtlogo" src="../../images/sdzxiantb.png"></image>
+    <view class="moluog">
+      <view class="aiyejt" wx:if="{{first_coupon.is_receive==1}}">
+        预订即可使用7天后过期
+      </view>
+      <view class="tlmju" wx:if="{{first_coupon.is_receive==1}}">
+        <view class="tylhwz">{{first_coupon.coupon_name}}</view>
+        <view class="tylhwz2">已领</view>
+        <image class="yhjt" src="../../images/tonyhj2.png"></image>
+      </view>
+      <view class="tlmju" wx:if="{{first_coupon.is_receive==0}}" data-value="{{first_coupon.coupon_id}}"
+        bindtap="preferentialApi">
+        <view class="tylhwz" style="color: #fff;">{{first_coupon.coupon_name}}</view>
+        <view class="tylhwz2" style="color: #fff;">领取</view>
+        <image class="yhjt" src="../../images/tonyhj1.png"></image>
+      </view>
+    </view>
+  </view>
+</view>
+<view wx:if="{{first_coupon.is_first!=1}}">
+  <view class="youhmk" wx:if="{{first_coupon.is_show==1}}">
+    <image class="sdtlogo sdtlogo2" src="../../images/yhqylq.png"></image>
+    <view class="moluog">
+      <image class="jianthangs" src="../../images/Path.png" bindtap="yhqTZ"></image>
+      <view class="tlmju tlmju2">
+        <view class="tylhwz" style="color: #fff;">{{first_coupon.coupon_name}}</view>
+        <image class="yhjt yhjt2" src="../../images/xdiaovpz.png"></image>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="heixie"></view>
+<view class="yudinmt middle" wx:if="{{detailsData.reserve==0}}">
+  <view class="weinz1">预订</view>
+  <view class="liqing">
+    <view class="buzydwz">该商家暂不支持在线预订</view>
+  </view>
+</view>
+<view class="meiyud" wx:if="{{detailsData.reserve==0}}">
+  <image class="meiyda middle" src="../../images/meiyda.png"></image>
+  <view class="dhydji middle" bindtap="phoneBD">电话预订</view>
+  <view class="miagwen" bindtap="sqrzF">我是商家/营销，<text>申请入驻</text></view>
+</view>
+<view class="yudinmt middle" wx:if="{{detailsData.reserve==1}}">
+  <view class="weinz1">预订</view>
+  <view class="liqing">
+    <image class="ppingmt" wx:if="{{detailsData.svg}}" src="../../images/dengdeng.png" data-value="2"
+      bindtap="container"></image>
+    <!-- <view class="juanjuan">券</view> -->
+    <view class="lipui" wx:if="{{detailsData.refund}}">
+      <image class="gouquan" src="../../images/gouzhi.png"></image>
+      <view class="zxianzuo">支持退</view>
+    </view>
+    <view class="lipui" wx:if="{{detailsData.reserve}}">
+      <image class="gouquan" src="../../images/gouzhi.png"></image>
+      <view class="zxianzuo">在线选桌</view>
+    </view>
+  </view>
+</view>
+<view class="riqi" wx:if="{{detailsData.reserve==1}}">
+  <view class="riqcss">
+    <view class="dindin {{date.date==item.date?'suolzjian':''}}" wx:for="{{date_list}}" wx:key="index"
+      data-value="{{item}}" bindtap="tianshu">
+      <view class="guafeng1">{{item.week_day}}</view>
+      <view class="guafeng2">{{item.month_day}}</view>
+    </view>
+  </view>
+</view>
+<view class="fengye middle" wx:for="{{place_type}}" wx:key="index" wx:if="{{detailsData.reserve==1}}">
+  <view style="display: flex;">
+    <image class="fengimg" src="{{item.icon}}"></image>
+    <view class="dengli">
+      <view class="taocmin">
+        <view class="mkywz">{{item.name}}</view>
+      </view>
+      <view class="exto">
+        <view class="taomiaos" wx:if="{{item.basic_price>0}}">低消{{item.basic_price/100}}元</view>
+        <view class="taomiaos" wx:if="{{item.basic_price<=0}}">无低消</view>
+        <!-- <view class="biaots">免预定金</view> -->
+      </view>
+    </view>
+    <view class="lybian">
+      <view class="liqidjiag" wx:if="{{item.deposit>0}}"><text>￥{{item.deposit/100}}</text> 起订</view>
+      <view class="liqidjiag" wx:if="{{item.deposit<=0}}"><text style="font-size: 24rpx;color:##B59D5C;">免预订金</text>
+      </view>
+      <view class="goumaingt" wx:if="{{!item.group_buy}}" data-value="{{item}}" data-area="{{1}}" bindtap="dianjiyud">预订
+      </view>
+      <view wx:if="{{item.group_buy.length>1}}">
+        <view class="tczk" wx:if="{{!openData[index].open}}">
+          <image class="taocmmty" src="../../images/xialjt.png"></image>
+          <view class="tjwlz" data-value="{{index}}" bindtap="openTC">查看更多</view>
+        </view>
+        <view class="tczk" wx:if="{{openData[index].open}}">
+          <image class="taocmmty fangzt" src="../../images/xialjt.png"></image>
+          <view class="tjwlz" data-value="{{index}}" bindtap="openTC">收起</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="tiechang" wx:if="{{openData[index].open}}">
+    <view class="taonr middle" wx:for="{{item.group_buy}}" wx:key="index">
+      <view class="jianjdg">
+        <view class="sjianwz">{{item.title}}</view>
+        <view class="lakjtw" wx:if="{{item.summary_text!=''}}">{{item.summary_text}}</view>
+        <view class="lakjtw" wx:if="{{item.summary_text==''}}">{{item.summary}}</view>
+        <view class="lakjtw" wx:if="{{item.summary_text==''&&item.summary==''}}">{{item.goods_detail}}</view>
+        <view class="qianawz" wx:if="{{item.reference_price>0}}">
+          <text>参考价：￥</text>{{item.reference_price/100}}
+          <text class="xhxyj">原价{{item.original_price/100}}</text>
+        </view>
+      </view>
+      <view class="jiwlagm">
+        <view class="goumaingt2" data-value="{{item}}" data-area="{{2}}" bindtap="dianjiyud">预订</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="heixie"></view>
+<view class="zhoubdivm middle">
+  <view class="zbtjwz">周边推荐</view>
+</view>
+<view class="dianlie middle">
+  <view class="tick" wx:for="{{storeData}}" wx:key="index" data-value="{{item}}" bindtap="detailsTZ">
+    <view class="vrqj" wx:if="{{item.vr}}">VR全景</view>
+    <image class="expect" src="{{item.logo}}"></image>
+    <view class="topic middle">{{item.name}}</view>
+    <view class="stars middle">
+      <view class="xing">
+        <image class="xinimg {{item.score<1?'huise':''}}" src="../../images/dawjltb.png"></image>
+        <image class="xinimg {{item.score<2?'huise':''}}" src="../../images/dawjltb.png"></image>
+        <image class="xinimg {{item.score<3?'huise':''}}" src="../../images/dawjltb.png"></image>
+        <image class="xinimg {{item.score<4?'huise':''}}" src="../../images/dawjltb.png"></image>
+        <image class="xinimg {{item.score<5?'huise':''}}" src="../../images/dawjltb.png"></image>
+      </view>
+      <view class="lian">{{item.type_name}}</view>
+    </view>
+    <view class="prices middle">
+      <view class="xins">￥{{item.basic_price/100}}</view>
+      <view class="gaodon">{{item.distance}}</view>
+    </view>
+  </view>
+</view>
+<view class="heixie"></view>
+<!-- 客服悬浮 -->
+<view class="kefxuanf">
+  <button class="hujkfcss" open-type="contact"></button>
+  <image class="kefu middle" src="../../images/kefu.png"></image>
+  <view class="kefwz">客服</view>
+</view>
+<!-- 优惠券弹框 -->
+<view class="zhezcheng" wx:if="{{zhezcheng}}"></view>
+<view class="yhqtk" wx:if="{{zhezcheng}}">
+  <view class="linqbei">领取成功</view>
+  <view class="tongpimg">
+    <view class="yhwzcss">
+      <view class="youhw1">{{first_coupon.coupon_name}}</view>
+      <view class="youhw2">{{first_coupon.expire_tips}}</view>
+    </view>
+    <image class="youhbeij" src="../../images/youhbeij.png"></image>
+  </view>
+  <view class="yudmiaos">预订即可使用</view>
+  <image class="womyqgbi middle" src="../../images/dadxx.png" bindtap="guangtk"></image>
+</view>
+<!-- 到店时间 -->
+<view class="zhezcheng" wx:if="{{daotk}}"></view>
+<view class="dianqsj" wx:if="{{daotk}}">
+  <view class="daihsdj middle">
+    <image class="bingdac" src="../../images/niaix.png" bindtap="sjtkqbb"></image>
+    <view class="guodaiq1 middle">到店时间</view>
+    <view class="guodaiq2 middle">{{taiyzheta}}</view>
+    <view class="guodaiq3">
+      <view class="qiangtonmr {{item.name==reserve_time?'jiulipuxz':''}}" wx:for="{{sjdData}}" wx:key="index"
+        data-value="{{item.name}}" bindtap="XZsjd">{{item.name}}</view>
+    </view>
+    <view class="guodaiq4 middle">*注：只可在预定时间点的1个小时前取消，若超过时 间未取消或未到店，订金不退。</view>
+    <view class="guodaiq5 middle" bindtap="bxcgdyq">确认</view>
+  </view>
+</view>

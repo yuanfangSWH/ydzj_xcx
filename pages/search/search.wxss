@@ -1,0 +1,80 @@
+/* pages/search/search.wxss */
+.weui-input{
+  width: 380rpx;
+  height: 54rpx;
+  margin-left: 24rpx;
+  color: #B8B8B8;
+}
+.search {
+  width: 100%;
+  height: 68rpx;
+  display: flex;
+  padding-top: 10rpx;
+  padding-bottom: 16rpx;
+}
+
+.shourq {
+  width: 450rpx;
+  height: 54rpx;
+  background-color: #1A1A1A;
+  border-radius: 10rpx;
+  margin-top: 8rpx;
+  display: flex;
+}
+
+.shous {
+  width: 28rpx;
+  height: 28rpx;
+  display: block;
+  padding-top: 14rpx;
+  padding-left: 22rpx;
+}
+
+.return {
+  width: 34rpx;
+  height: 34rpx;
+  display: block;
+  padding: 18rpx 26rpx 0 26rpx;
+}
+
+.shoulishi {
+  width: 686rpx;
+  height: 72rpx;
+  display: flex;
+  margin-bottom: 18rpx;
+}
+
+.xinshi {
+  line-height: 72rpx;
+  color: #FFBE11;
+  font-size: 32rpx;
+  flex: 1;
+}
+
+.lajton {
+  width: 28rpx;
+  height: 31rpx;
+  display: block;
+  padding-top: 20rpx;
+}
+
+.yonlie {
+  width: 686rpx;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.zhelis {
+  padding-left: 24rpx;
+  padding-right: 24rpx;
+  height: 72rpx;
+  background: #1a1a1a;
+  border-radius: 12rpx;
+  color: #B8B8B8;
+  font-size: 28rpx;
+  line-height: 72rpx;
+  text-align: center;
+  margin-right: 26rpx;
+  margin-bottom: 26rpx;
+}

@@ -1,0 +1,55 @@
+<!--pages/searchlist/searchlist.wxml-->
+<view class="{{isOpen?'testBox':''}}">
+  <topMOD id='topMOD'></topMOD>
+  <view class="top-chen">
+    <topMOD></topMOD>
+    <view class="search">
+      <image class="return" src="../../images/back.png" bindtap="return"></image>
+      <view class="shourq">
+        <image class="shous" src="../../images/luigjss.png"></image>
+        <input class="weui-input" confirm-type="search" placeholder="搜索商家名称或关键字" value="{{searchData}}"
+          bindconfirm="searchF" />
+      </view>
+    </view>
+    <view class="liexfx"></view>
+    <!-- 下拉筛选 -->
+    <view class="gudin">
+      <screening-TAB areaData="{{areaData}}" typeData="{{typeData}}" sortingData="{{sortingData}}"
+        bind:onChange="onChange">
+      </screening-TAB>
+    </view>
+  </view>
+
+  <!-- 列表 -->
+  <view class="liebiao middle">
+    <view wx:if="{{storeData && storeData.length > 0}}" class="neitianc" wx:for="{{storeData}}" wx:key="index" data-value="{{item}}" bindtap="detailsTZ">
+      <image class="vrhuo" wx:if="{{item.vr}}" src="../../images/vrbz.png"></image>
+      <image class="zhexie" src="{{item.logo}}"></image>
+      <view class="erduo">
+        <view class="topic">{{item.name}}</view>
+        <view class="stars">
+          <view class="xing">
+            <image class="xinimg {{item.score<1?'huise':''}}" src="../../images/dawjltb.png"></image>
+            <image class="xinimg {{item.score<2?'huise':''}}" src="../../images/dawjltb.png"></image>
+            <image class="xinimg {{item.score<3?'huise':''}}" src="../../images/dawjltb.png"></image>
+            <image class="xinimg {{item.score<4?'huise':''}}" src="../../images/dawjltb.png"></image>
+            <image class="xinimg {{item.score<5?'huise':''}}" src="../../images/dawjltb.png"></image>
+          </view>
+          <view class="lian">{{item.type_name}}</view>
+        </view>
+        <view class="prices">
+          <view class="xins">￥{{item.basic_price/100}}<text>/人</text></view>
+          <view class="gaodon">{{item.distance}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="noneBox" wx:if="{{!storeData || storeData.length == 0}}">
+      <view class="img-no">
+        <image class="indexNone" src="../../images/index_none.png"></image>
+      </view>
+      <view class="noneText">~目前暂无商家数据哦~</view>
+    </view>
+    <!-- 悬浮返回 -->
+    <image class="fangdinbu" wx:if="{{storeData.length>10}}" src="../../images/fangdinbu.png" bindtap="jumpWZ"></image>
+  </view>
+</view>

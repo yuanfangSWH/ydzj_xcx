@@ -1,0 +1,44 @@
+/* pages/details/information/information.wxss */
+.weihnmk{
+  width: 100%;
+  background:#131313;
+  padding-top: 40rpx;
+  padding-bottom: 40rpx;
+  margin-top: 30rpx;
+}
+.gunygui{
+  width: 686rpx;
+}
+.lrjns1{
+  display: flex;
+  color: #E1E1E1;
+  font-size: 30rpx;
+  line-height: 42rpx;
+  padding-bottom: 30rpx;
+}
+.shhnximg{
+  width: 42rpx;
+  height: 42rpx;
+  display: block;
+  margin-left: 30rpx;
+  margin-right: 20rpx;
+}
+.lrjns2{
+  display: flex;
+  flex-wrap: wrap;
+  color: #8C8C8C;
+  font-size: 28rpx;
+  line-height: 28rpx;
+  margin-left: 30rpx;
+}
+.sheizgx{
+  margin-right: 40rpx;
+  margin-bottom: 40rpx;
+  display: flex;
+}
+.xxgzgimg{
+  width: 28rpx;
+  height: 28rpx;
+  display: block;
+  margin-right: 12rpx;
+}

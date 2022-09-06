@@ -1,0 +1,8 @@
+/* pages/pay/results/results.wxss */
+page {
+  background-color: #1A1A1A;
+}
+
+.bit {
+  background: #0A0A0A;
+}

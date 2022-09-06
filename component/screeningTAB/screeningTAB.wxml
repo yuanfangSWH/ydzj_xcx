@@ -1,0 +1,15 @@
+<!--component/screeningTAB/screeningTAB.wxml-->
+<view class="lieri">
+    <view class="lits {{screening==1 ? 'litsxuanz':''}}" data-value="1" bindtap="choosetj">{{areaText}}<image class="engbojt {{screening==1 ? 'xuanz':''}} {{areaLength ? 'pianyi':''}}" src="../../images/xialjt.png"></image></view>
+    <view class="lits {{screening==2 ? 'litsxuanz':''}}" data-value="2" bindtap="choosetj">{{typeText}}<image class="engbojt {{screening==2 ? 'xuanz':''}} {{typeLength ? 'pianyi':''}}" src="../../images/xialjt.png"></image></view>
+    <view class="lits {{screening==3 ? 'litsxuanz':''}}" data-value="3" bindtap="choosetj">{{sortingText}}<image class="engbojt {{screening==3 ? 'xuanz':''}} {{sortingLength ? 'pianyi':''}}" src="../../images/xialjt.png"></image></view>
+    <view class="ronhe" wx:if="{{screening==1}}">
+      <view class="li {{areaValue==item.id ? 'lixuanz':''}}" wx:for="{{areaData}}" wx:key="index" data-value="{{index}}" bindtap="conditions">{{item.name}}</view>
+    </view>
+    <view class="ronhe" wx:if="{{screening==2}}">
+      <view class="li {{typeValue==item.type_id ? 'lixuanz':''}}" wx:for="{{typeData}}" wx:key="index" data-value="{{index}}" bindtap="conditions">{{item.name}}</view>
+    </view>
+    <view class="ronhe" wx:if="{{screening==3}}">
+      <view class="li {{sortingValue==item.id ? 'lixuanz':''}}" wx:for="{{sortingData}}" wx:key="index" data-value="{{index}}" bindtap="conditions">{{item.name}}</view>
+    </view>
+</view>

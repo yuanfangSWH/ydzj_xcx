@@ -1,0 +1,26 @@
+<!--component/RegionSelectBox/RegionSelectBox.wxml-->
+
+<view class="cover-view" style="display:{{showInfo}}">
+    <view class="items">
+      
+      <view class="ctrl">
+        <view class="btn-cancel" bindtap="close">取消</view>
+        <view class="btn-ok" bindtap="selectOk">确定 </view>
+      </view>
+
+      <picker-view value="{{dataValue}}" class="item-list" indicator-class="item-select-box" mask-class="item-select-mask" bindchange="testSelect">
+        <picker-view-column class="picker-box">
+          <view wx:for="{{province}}" wx:key="index" data-index="{{index}}" wx:for-index="index" class="aitem">{{item.name}}</view>
+        </picker-view-column>
+        
+        <picker-view-column class="picker-box">
+          <view wx:for="{{city}}" wx:key="index" data-index="{{index}}" wx:for-index="index" class="aitem">{{item.name}}</view>
+        </picker-view-column>
+
+        <picker-view-column class="picker-box">
+          <view wx:for="{{area}}" wx:key="index" data-index="{{index}}" wx:for-index="index" class="aitem">{{item.name}}</view>
+        </picker-view-column>
+      </picker-view>
+      
+    </view>
+</view>

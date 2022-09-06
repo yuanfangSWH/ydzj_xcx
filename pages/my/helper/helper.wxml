@@ -1,0 +1,11 @@
+<!--pages/my/helper/helper.wxml-->
+<topMOD></topMOD>
+<view class="bit">
+  <image class="return" src="../../../images/back.png" bindtap="return"></image>
+</view>
+<view class="items">
+  <view wx:for="{{dataList}}" wx:key="index" data-index="{{index}}" wx:for-index="index" class="item" bindtap="showContent">
+    <view class="title">{{item.title}}</view>
+    <image class="input-icon" src="../../../images/path.png" />
+  </view>
+</view>

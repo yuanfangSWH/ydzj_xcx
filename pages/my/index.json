@@ -1,0 +1,5 @@
+{
+  "usingComponents": {"topMOD": "/component/topMOD/topMOD"},
+  "navigationBarTitleText": "我的",
+  "enablePullDownRefresh":true
+}

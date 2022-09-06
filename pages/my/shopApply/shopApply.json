@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "topMOD": "/component/topMOD/topMOD",
+    "ActionSheet":"../../../component/ActionSheet/ActionSheet",
+    "RegionSelectBox":"../../../component/RegionSelectBox/RegionSelectBox"
+  },
+  "navigationBarTitleText": "商家入驻"
+}

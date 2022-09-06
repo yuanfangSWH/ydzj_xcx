@@ -1,0 +1,11 @@
+<view class="wx-popup" hidden="{{flag}}">
+  <view class='popup-container'>
+    <view class="{{main_class}}">
+      <slot></slot>
+    </view>
+    <view class="wx-popup-btn">
+      <image class="btn-ok" src="../../images/niltmx.png" bindtap='_success'>{{btn_ok}}</image>
+    </view>
+  </view>
+  
+</view>

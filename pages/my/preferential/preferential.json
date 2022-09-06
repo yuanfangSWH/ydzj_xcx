@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "topMOD": "/component/topMOD/topMOD"
+  },
+  "enablePullDownRefresh":true
+}

@@ -1,0 +1,13 @@
+<!--pages/my/preferentialwc/preferentialwc.wxml-->
+<topMOD colorData="{{colorData}}"></topMOD>
+<view class="bit">
+  <image class="return" src="../../../images/back.png" bindtap="return"></image>
+  <view class="juzwenz">提交成功</view>
+</view>
+<view class="yuanjzhuang">
+  <view class="kusnr"></view>
+</view>
+<image class="logrt middle" src="../../../images/meiyda2.png"></image>
+<view class="wilt1">提交成功</view>
+<view class="wilt2">感谢您的提交，我们将尽快解决问题</view>
+<view class="wilt3 middle" bindtap="return">好的</view>

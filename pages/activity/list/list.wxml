@@ -1,0 +1,21 @@
+<!--pages/activity/list/list.wxml-->
+<topMOD colorData="{{colorData}}"></topMOD>
+<view class="bit">
+  <image class="return" src="../../../images/back.png" bindtap="return"></image>
+  <view class="juzwenz">我邀请的人</view>
+</view>
+<view class="yaotkm">
+  <image class="haiyqimg" src="../../../images/activity/haiyq.png"></image>
+  <view class="bgkli middle">
+    <view class="ndxiaorbt">
+      <view class="ndxiaor">时间</view>
+      <view class="ndxiaor">昵称</view>
+      <view class="ndxiaor">红包(元)</view>
+    </view>
+    <view class="yaoscss" wx:for="{{wdyqData}}" wx:key="index">
+      <view class="ndxiaor">{{item.create_time}}</view>
+      <view class="ndxiaor">{{item.name}}</view>
+      <view class="ndxiaor">{{item.reward}}元</view>
+    </view>
+  </view>
+</view>

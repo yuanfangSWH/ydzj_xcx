@@ -1,0 +1,2 @@
+<!--component/topMOD/topMOD.wxml-->
+<view class="topcss" style="height:{{heightData}};background:{{colorData}};"></view>

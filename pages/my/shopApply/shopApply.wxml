@@ -1,0 +1,53 @@
+<!--pages/my/shopApply/index.wxml-->
+<view>
+  <topMOD colorData="{{colorData}}"></topMOD>
+<view class="bit">
+  <image class="return" src="../../../images/back.png" bindtap="return"></image>
+</view>
+<view class="yuanjzhuang">
+  <view class="kusnr"></view>
+</view>
+  <view class="shop-apply">
+    <view class="input-item">
+      <view class="label">商家名称</view>
+      <input model:value="{{shopName}}" class="input" placeholder="请输入商家名称" />
+    </view>
+
+    <view class="input-item">
+      <view class="label">商家类型</view>
+      <view wx:if="{{shopInfo.type_name!=''}}" class="input" bindtap="showShopType">{{shopInfo.type_name}}</view>
+      <view wx:else class="input" bindtap="showShopType">请选择商家类型</view>
+      <image class="input-icon" src="../../../images/path.png" />
+    </view>
+
+    <view class="input-item">
+      <view class="label">联系电话</view>
+      <input model:value="{{shopPhone}}" class="input" placeholder="请输入您的手机号码" />
+    </view>
+
+    <view class="input-item">
+      <view class="label">所在地区</view>
+      <view wx:if="{{regionName==''}}" class="input" bindtap="showRegion">请选择商家所在地区</view>
+      <view wx:else class="input" bindtap="showRegion">{{regionName}}</view>
+      <image class="input-icon" src="../../../images/path.png" />
+    </view>
+
+    <view class="input-item">
+      <view class="label">详细地址</view>
+      <input model:value="{{shopAddress}}" class="input" placeholder="请输入商家详细地址" />
+    </view>
+
+    <view class="check-item">
+      <image wx:if="{{isCheck}}" class="input-check" src="../../../images/checked.png" bindtap="uncheckThis" />
+      <image wx:else class="input-check" src="../../../images/uncheck.png" bindtap="checkThis" />
+      <view class="input-check-info">我已阅读并同意<span style="color:#ffbe11" bindtap="showAgreement">《商家入驻协议》</span></view>
+    </view>
+
+    <button class="btn" bindtap="submitShop">申请入驻</button>
+
+  </view>
+  <ActionSheet active="{{isShowShopType}}" items="{{shopType}}" bind:close="actionSheetClose"
+    bind:selected="selectedTheShopType"></ActionSheet>
+  <RegionSelectBox active="{{isShowRegion}}" id="RegionSelectBox" bind:close="regionClose"
+    bind:selected="selectedTheRegion"></RegionSelectBox>
+</view>

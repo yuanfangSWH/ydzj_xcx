@@ -1,0 +1,25 @@
+<!--pages/my/set/set.wxml-->
+<my-nav title="设置"></my-nav>
+<view class="page-view">
+  <view class="page-panel">
+    <view class="set-item" bindtap="goToProfile">
+      <view class="title">编辑资料</view>
+      <image class="icon" src="{{'/images/Path.png'}}"></image>
+    </view>
+
+    <view class="set-item" data-url="{{loginData.user_server_url}}" data-title="用户协议" bindtap="goUrl">
+      <view class="title">用户协议</view>
+      <image class="icon" src="{{'/images/Path.png'}}"></image>
+    </view>
+
+    <view class="set-item" data-url="{{loginData.user_agree_url}}" data-title="隐私协议" bindtap="goUrl">
+      <view class="title">隐私政策</view>
+      <image class="icon" src="{{'/images/Path.png'}}"></image>
+    </view>
+
+    <view class="set-item" bindtap="goToAbout">
+      <view class="title">关于我们</view>
+      <image class="icon" src="{{'/images/Path.png'}}"></image>
+    </view>
+  </view>
+</view>

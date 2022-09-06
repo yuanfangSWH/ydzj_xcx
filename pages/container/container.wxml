@@ -1,0 +1,4 @@
+<!--pages/container/container.wxml-->
+<view class="container">
+<web-view src="{{urlData}}" bindmessage="handleGetMessage"></web-view>
+</view>

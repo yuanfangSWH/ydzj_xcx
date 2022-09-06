@@ -1,0 +1,71 @@
+<!--pages/details/preferential/preferential.wxml-->
+<topMOD colorData="{{colorData}}"></topMOD>
+<view class="bit">
+  <image class="return" src="../../../images/back.png" bindtap="return"></image>
+  <view class="juzwenz">可用优惠券</view>
+</view>
+<view class="yuanjzhuang">
+  <view class="kusnr"></view>
+</view>
+<view class="wxtaok wxtaok2 middle">
+  <view class="limwt1">可用券（{{my_coupon_sl}}）</view>
+  <view class="limwt2" bindtap="bsyhqF">不使用优惠券</view>
+</view>
+<view wx:if="{{my_coupon_sl>0}}">
+  <view class="xuandyhj middle" wx:for="{{my_coupon}}" wx:key="index" >
+    <image class="minma" src="../../../images/miny1.png"></image>
+    <view class="lalatim">
+      <view class="yeaiq">
+        <view class="tiaowz1">{{item.coupon.name}}</view>
+        <view class="tiaowz2">{{item.coupon.use_condition!=''?item.coupon.use_condition:'暂无介绍'}}</view>
+        <view class="tiaowz3">{{item.use_start_time}} - {{item.use_end_time}}</view>
+      </view>
+      <view class="jiantgl2" wx:if="{{receive_id!=item.receive_id}}" data-value="{{item}}" bindtap="xuanyhqF">待使用</view>
+      <view class="jiantgl2 jiantgl3" wx:if="{{receive_id==item.receive_id}}">已经选择</view>
+    </view>
+    <image class="minma" wx:if="{{receive_id!=item.receive_id}}" src="../../../images/miny3.png"></image>
+    <image class="minma" wx:if="{{receive_id==item.receive_id}}" src="../../../images/miny4.png"></image>
+  </view>
+</view>
+<!-- 无优惠券 -->
+<view class="wuylhq middle" wx:if="{{my_coupon_sl==0}}">
+  <image class="meijuq" src="../../../images/meijuq.png"></image>
+  <text>暂无优惠券</text>
+</view>
+<view class="wxtaok middle">
+  还可兑换
+</view>
+<view>
+  <view class="xuandyhj middle" wx:for="{{shop_coupon}}" wx:key="index" >
+    <image class="minma" src="../../../images/miny1.png"></image>
+    <view class="lalatim">
+      <view class="yeaiq">
+        <view class="tiaowz1">{{item.name}}</view>
+        <view class="tiaowz2">{{item.use_condition}}</view>
+        <view class="tiaowz3">{{item.use_start_time}} - {{item.use_end_time}}</view>
+      </view>
+      <view class="jiantgl2" data-value="{{item}}" bindtap="yhqdhF">
+        <view class="jifwz1"><text>{{item.point}} </text>积分</view>
+        <view class="jifwz2">兑换</view>
+      </view>
+    </view>
+    <image class="minma" src="../../../images/miny3.png"></image>
+  </view>
+</view>
+
+<!-- 兑换券弹框 -->
+<view class="zhezcheng" wx:if="{{dhqtk}}"></view>
+<view class="dianqsj" wx:if="{{dhqtk}}">
+ <view class="daihsdj middle">
+  <image class="bingdac" src="../../../images/niaix.png" bindtap="kaiqgbtk"></image>
+  <view class="guodaiq1 middle">{{yhqData.name}}</view>
+  <view class="guodaiq2 middle">{{yhqData.use_condition}}</view>
+  <view class="guodaiq2 middle">兑换后{{yhqData.use_start_time}} - {{yhqData.use_end_time}}内有效</view>
+  <view class="guodaiq3 middle">
+    <image class="xingjifimg" src="../../../images/haixbf.png"></image>
+    <view class="jifml">{{yhqData.point}}积分</view>
+    <view class="ruihsl">兑换数量：1</view>
+  </view>
+   <view class="guodaiq5 middle" data-value="{{yhqData.coupon_id}}" bindtap="exchange">确认</view>
+ </view>
+</view>

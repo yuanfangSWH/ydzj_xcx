@@ -1,0 +1,61 @@
+/* pages/activity/list/list.wxss */
+page {
+  background-color: #35369f;
+}
+
+.bit {
+  background: #0A0A0A;
+}
+.yaotkm {
+  width: 690rpx;
+  height: auto;
+  position: relative;
+  top: 80rpx;
+  left: 50%;
+  margin-left: -340rpx;
+  background: #3f61ca;
+  border-radius: 30rpx;
+  padding-bottom: 90rpx;
+}
+.haiyqimg {
+  width: 230rpx;
+  height: 90rpx;
+  display: block;
+  position: absolute;
+  top: -34rpx;
+  left: 50%;
+  margin-left: -115rpx;
+  z-index: 30;
+}
+.bgkli {
+  width: 650rpx;
+  height: auto;
+  margin-left: 20rpx;
+  z-index: 40;
+}
+
+.ndxiaorbt {
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #FFD821;
+  display: flex;
+  padding-top: 50rpx;
+}
+
+.ndxiaor {
+  flex: 1;
+}
+
+.yaoscss {
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 24rpx;
+  color: #fff;
+  display: flex;
+  border-bottom: 2rpx #506dce solid;
+}

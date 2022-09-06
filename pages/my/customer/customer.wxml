@@ -1,0 +1,17 @@
+<!--pages/my/customer/index.wxml-->
+<topMOD></topMOD>
+<view class="bit">
+  <image class="return" src="../../../images/back.png" bindtap="return"></image>
+</view>
+<view>
+  <view class="customer-img">
+    <image class="img" src="../../../images/customerImg.png"></image>
+    <view class="customer-info">
+      <view class="title">客服微信号：YDZJKF</view>
+      <view class="sub-title">服务时间：周一到周日9:00-24:00</view>
+    </view>
+    <button class="btn" bindtap="copyTheWX">复制微信号</button>
+    <button class="btn" open-type="contact">呼叫客服</button>
+  </view>
+  
+</view>

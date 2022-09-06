@@ -1,0 +1,226 @@
+/**index.wxss**/
+.search {
+  width: 686rpx;
+  height: 68rpx;
+  display: flex;
+  padding-top: 10rpx;
+  padding-bottom: 20rpx;
+}
+
+.dizdinw {
+  height: 100%;
+  display: flex;
+  font-size: 30rpx;
+  color: #fff;
+  line-height: 68rpx;
+}
+
+.xialjt {
+  width: 20rpx;
+  height: 12rpx;
+  padding-top: 28rpx;
+  padding-left: 13rpx;
+  padding-right: 30rpx;
+}
+
+.shourq {
+  width: 380rpx;
+  height: 54rpx;
+  background-color: #1A1A1A;
+  border-radius: 10rpx;
+  margin-top: 8rpx;
+}
+
+.shous {
+  width: 28rpx;
+  height: 28rpx;
+  display: block;
+  padding-top: 14rpx;
+  padding-left: 22rpx;
+}
+
+.slide {
+  width: 686rpx;
+  height: 238rpx;
+  padding-top: 100rpx;
+}
+
+.swiper {
+  height: 238rpx;
+}
+
+.slideimg {
+  width: 686rpx;
+  height: 238rpx;
+  display: block;
+}
+
+.daoh {
+  width: 100%;
+  height: 236rpx;
+  display: flex;
+}
+
+.ulwei {
+  flex: 1;
+  padding-top: 32rpx;
+}
+
+.yduiytb {
+  width: 108rpx;
+  height: 108rpx;
+  display: block;
+}
+
+.liwenz {
+  text-align: center;
+  font-size: 28rpx;
+  line-height: 74rpx;
+  color: #fff;
+}
+
+.cainbt {
+  width: 686rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  display: flex;
+}
+
+.btwz1 {
+  flex: 1;
+  font-size: 32rpx;
+  color: #FFFFFF;
+}
+
+.btwz2 {
+  width: 56rpx;
+  font-size: 26rpx;
+  color: #8C8C8C;
+}
+
+.dianlie {
+  width: 686rpx;
+  /* column-count: 2;
+  column-gap: 0; */
+  margin-bottom: 100rpx;
+}
+
+.tick {
+  background-color: #1A1A1A;
+  width: 330rpx;
+  box-sizing: border-box;
+  float: left;
+  /* break-inside: avoid; */
+  border-radius: 20rpx;
+  overflow: hidden;
+  padding-bottom: 26rpx;
+  margin-bottom: 30rpx;
+  position: relative;
+}
+.tick:nth-child(odd) {
+  margin-right: 26rpx;
+}
+
+.vrqj {
+  position: absolute;
+  width: 96rpx;
+  height: 36rpx;
+  line-height: 36rpx;
+  text-align: center;
+  background-color: #ffbe11;
+  font-size: 20rpx;
+  font-weight: bold;
+  color: #0a0a0a;
+  border-radius: 5px 0 0 0;
+  top: 302rpx;
+  right: 0;
+}
+
+.expect {
+  width: 330rpx;
+  height: 336rpx;
+  display: block;
+  margin-bottom: 10rpx;
+}
+
+/* 该首页topic不需要添加隐藏效果 */
+.topic {
+  width: 84%;
+  height: 100rpx;
+  line-height: 50rpx;
+  font-size: 30rpx;
+  color: #fff;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.stars {
+  width: 84%;
+  display: flex;
+  margin-bottom: 10rpx;
+}
+
+.xing {
+  width: 50%;
+  height: 20rpx;
+  display: flex;
+  padding-top: 8rpx;
+}
+
+.xinimg {
+  width: 20rpx;
+  height: 20rpx;
+  display: block;
+  margin-right: 4rpx;
+}
+
+.huise {
+  filter: grayscale(100%);
+}
+
+.lian {
+  width: 50%;
+  height: 40rpx;
+  line-height: 40rpx;
+  color: #8C8C8C;
+  font-size: 22rpx;
+  text-align: right;
+}
+
+.prices {
+  width: 84%;
+  display: flex;
+}
+
+.xins {
+  width: 60%;
+  height: 30rpx;
+  line-height: 30rpx;
+  color: #8C8C8C;
+  font-size: 32rpx;
+}
+
+.gaodon {
+  width: 40%;
+  height: 30rpx;
+  line-height: 30rpx;
+  color: #8C8C8C;
+  font-size: 22rpx;
+  text-align: right;
+}
+
+.gifIMG {
+  width: 686rpx;
+  height: 110rpx;
+  display: block;
+  padding-bottom: 24rpx;
+}
+.noneBox{ width: 100%;}
+.img-no{ width: 700rpx; margin: 80rpx auto 10rpx; display: inline-block; text-align: center;}
+.indexNone{ width: 176rpx; height: 116rpx; display: inline-block;}
+.noneText{ width: 700rpx;font-size: 24rpx; color: #8C8C8C; display: inline-block; text-align: center;}

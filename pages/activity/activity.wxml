@@ -1,0 +1,320 @@
+<!-- pages/activity/activity.wxml -->
+<topMOD colorData="{{colorData}}"></topMOD>
+<scroll-view scroll-y="{{isPageScroll}}">
+  <view class="top-chen">
+    <topMOD colorData="{{colorData}}"></topMOD>
+    <view class="bit">
+      <image class="return" src="../../images/back.png" bindtap="return"></image>
+      <view class="juzwenz">{{hdxlData.name}}</view>
+    </view>
+  </view>
+  <image class="wobanbudao" src="../../images/activity/rgsl.png"></image>
+  <view class="sjianbait middle {{share?'sjianbait2':''}}">
+    <view class="yihchl {{share?'yihchl2':''}}">
+      <view class="wejiojx">
+        <image class="wejiojx2" src="../../images/activity/bttt.png"></image>
+        <view class="wejiojx3">一重礼：3人助力必得100元</view>
+      </view>
+      <view class="zuoins middle">
+        <view class="xida" wx:if="{{!share}}">{{huodx.invite_msg}}</view>
+        <view class="xida" wx:if="{{share}}">
+          <text wx:if="{{invite_user.length<1}}">兄弟，帮帮忙，我想要这个免单大奖！</text>
+          <text wx:if="{{invite_user.length>2}}">求助攻，我离100元无门槛消费券就差一个你了！</text>
+        </view>
+        <view class="xida2">
+          <text wx:if="{{invite_user.length>=3}}">继续邀请好友助力冲刺千元免单大奖吧！</text>
+        </view>
+        <view class="zheycmld">
+          <view class="tlajisamhwy">
+            <image class="yueksjf middle" wx:if="{{invite_user.length>=1}}" src="{{invite_user[0].avatar}}"></image>
+            <image class="yueksjf middle" wx:if="{{invite_user.length<1}}" src="../../images/activity/zhuli.png"></image>
+            <viewc class="liy" wx:if="{{invite_user.length>=1}}">
+              {{invite_user[0].nickname}}已助力
+            </viewc>
+            <viewc class="liy middle" wx:if="{{invite_user.length<1}}">等你助力</viewc>
+          </view>
+          <view class="tlajisamhwy">
+            <image class="yueksjf middle" wx:if="{{invite_user.length>=2}}" src="{{invite_user[1].avatar}}"></image>
+            <image class="yueksjf middle" wx:if="{{invite_user.length<2}}" src="../../images/activity/zhuli.png"></image>
+            <viewc class="liy" wx:if="{{invite_user.length>=2}}">
+              {{invite_user[1].nickname}}已助力
+            </viewc>
+            <viewc class="liy middle" wx:if="{{invite_user.length<2}}">等你助力</viewc>
+          </view>
+          <view class="tlajisamhwy" wx:if="{{!share}}">
+            <image class="yueksjf middle" wx:if="{{invite_user.length>=3}}" src="{{invite_user[2].avatar}}"></image>
+            <image class="yueksjf middle" wx:if="{{invite_user.length<3}}" src="../../images/activity/zhuli.png"></image>
+            <viewc class="liy" wx:if="{{invite_user.length>=3}}">
+              {{invite_user[2].nickname}}已助力
+            </viewc>
+            <viewc class="liy middle" wx:if="{{invite_user.length<3}}">等你助力</viewc>
+          </view>
+          <view class="tlajisamhwy" wx:if="{{share}}">
+            <image class="yueksjf middle" src="../../images/activity/zhuli.png"></image>
+            <viewc class="liy middle">等你助力</viewc>
+          </view>
+        </view>
+      </view>
+      <view class="lhugnsan middle" wx:if="{{!share}}">
+        <button class="tinljpi" type="primary" open-type="share"></button>
+        <image class="bnakjyzy" src="../../images/activity/natwae.png"></image>
+        <view class="lhugnsan2">邀请好友</view>
+      </view>
+      <view class="lhugnsan middle" wx:if="{{share}}" bindtap="TSXZ">
+        <image class="bnakjyzy" src="../../images/activity/natwae.png"></image>
+        <view class="lhugnsan2">助力好友</view>
+      </view>
+      <view class="yonguy" wx:if="{{!share}}">
+        <view class="jiymwz1">注:下载并登录APP才算助力成功</view>
+        <view class="gonys1" bindtap="linq100">
+          <image class="lihhw" src="../../images/activity/lihhw.png"></image>
+          点我领100元
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 二重礼 -->
+  <view class="part02">
+    <view class="t02">
+      <image class="part02Bg01" src="../../images/activity/titlebg02.png"></image>
+      <view class="part02Nav01">
+        <view class="title2">二重礼：冲刺排名再赢1000元</view>
+        <view class="part02-nav">
+          <view class="part02-nav-left">Top10榜单（{{start_time}}～{{end_time}}）</view>
+          <view class="part02-nav-right" bindtap="showPopup_guize">
+            <view>活动</view>
+            <view>规则</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="part02Main">
+      <view class="topTitle" style="margin-bottom: 20rpx;">
+        <view class="paiming" style="padding-left: 26rpx;">
+          <text class="text-t">排名</text>
+        </view>
+        <view class="nicheng">
+          <text class="text-t">昵称</text>
+        </view>
+        <view class="renshu" style="padding-right: 20rpx;">
+          <text class="text-t" style="width:100%; float: left; text-align: right;">邀请人数</text>
+        </view>
+      </view>
+      <view wx:if="{{phbData.length >0}}" wx:for="{{phbData}}" wx:for-item="data" wx:key="index" class="topTitle listNav {{huodx.my_rank == data.rank?'rankActive':''}}">
+        <view class="paiming">
+          <image class="text-2" src="{{'../../images/activity/t'+index+'.png'}}"></image>
+          <text class="text-3">{{data.rank_reward}}</text>
+        </view>
+        <view class="nicheng">
+          <view class="text-4">{{data.name}}</view>
+        </view>
+        <view class="renshu">
+          <text class="text-5">{{data.num}}</text>
+        </view>
+      </view>
+      <view wx:if="{{!phbData||phbData.length == 0}}" class="notopdata">~虚位以待~</view>
+      <view style="width: 100%;height: 30rpx;"></view>
+      <view class="myinfo">
+        <image class="topbg2" src="../../images/activity/bg2.png"></image>
+        <view class="myTopNav">
+          <view class="infoChild">
+            <view class="myItem1">
+              <text>{{huodx.my_rank}}</text>
+            </view>
+            <view class="myItem2" wx:if="{{!share}}">我的排名</view>
+            <view class="myItem2" wx:if="{{share}}">TA排名</view>
+          </view>
+          <view class="infoChild">
+            <view class="myItem1">
+              <text>{{huodx.my_invite_num}}</text>
+              人
+            </view>
+            <view class="myItem2" wx:if="{{!share}}">我已邀请</view>
+            <view class="myItem2" wx:if="{{share}}">TA已邀请</view>
+          </view>
+          <view class="infoChild">
+            <view class="myItem1">
+              <text>{{huodx.my_aware}}</text>
+              元
+            </view>
+            <view class="myItem2" wx:if="{{!share}}">我的红包</view>
+            <view class="myItem2" wx:if="{{share}}">TA的红包</view>
+          </view>
+        </view>
+      </view>
+      <view class="lookyaoqing" bindtap="showPopup" wx:if="{{!share}}">查看邀请的人</view>
+      <view class="zhuliBtn" wx:if="{{!share}}">
+        <button class="tinljpi" type="primary" open-type="share"></button>
+        <image class="btnbg" src="../../images/activity/bt01.png"></image>
+        <view class="yaoBtn">邀请好友</view>
+      </view>
+      <view class="zhuliBtn" wx:if="{{share}}" bindtap="TSXZ">
+        <image class="btnbg" src="../../images/activity/bt01.png"></image>
+        <view class="yaoBtn">助力好友</view>
+      </view>
+    </view>
+  </view>
+  <!-- 二重礼end -->
+  <!-- 三重礼 -->
+  <view class="panel-view">
+    <view class="panel-view-title">
+      <view class="panel-view-title-info">三重礼：新用户助力拿现金红包</view>
+      <image class="panel-view-title-img" src="../../images/activity/panel-view-title.png"></image>
+    </view>
+    <view class="panel-view-list">
+      <view class="panel-view-point"></view>
+      <view class="panel-view-item">分享广西区内好友注册或登录探电小程序，好友即可获得0.3元微信红包奖励。</view>
+    </view>
+    <view class="panel-view-list">
+      <view class="panel-view-point"></view>
+      <view class="panel-view-item">每邀请一位广西区内好友下载探电app，即可获得3元现金红包。</view>
+    </view>
+    <view class="panel-view-list">
+      <view class="panel-view-point"></view>
+      <view class="panel-view-item">点击下方【查看红包记录】查看自己邀请新用户记录。</view>
+    </view>
+    <view class="panel-view-btn">
+      <view class="panel-view-abtn panel-view-abtn-line" bindtap="showPopup_hb" wx:if="{{!share}}">
+        查看红包记录
+      </view>
+      <view class="panel-view-abtn panel-view-abtn-line" bindtap="TSXZ" wx:if="{{share}}">
+        查看红包记录
+      </view>
+      <button class="panel-view-abtn panel-view-abtn-blank" open-type="share" wx:if="{{!share}}">
+        继续拿现金
+      </button>
+      <button class="panel-view-abtn panel-view-abtn-blank" wx:if="{{share}}" bindtap="TSXZ">
+        我也拿现金
+      </button>
+    </view>
+  </view>
+  <view class="page-footer">*活动最终解释权归探电平台所有*</view>
+  <!-- 三重礼end -->
+  <view class="zhezcheng" wx:if="{{cover}}"></view>
+  <view class="zuimiyit" wx:if="{{hdbzF}}">
+    <view class="ggsnl1">{{tirnr}}</view>
+    <view class="lifanqd middle" bindtap="hdbzF">确定</view>
+  </view>
+  <!-- 提示弹框 -->
+  <view class="tisticss" animation="{{animationData}}">
+    <image class="touximg" src="{{lunbxxi.avatar}}"></image>
+    <view class="wenzctc">{{lunbxxi.text}}</view>
+  </view>
+</scroll-view>
+<!-- 我邀请的人 -->
+<popup id='popup' bind:error="_error" bind:success="_success">
+  <view class="yqbox">
+    <view class="titleBox">
+      <image src="../../images/yq_bg.png"></image>
+      <view class="yq-title">我邀请的人</view>
+    </view>
+    <view class="gz-content">
+      <view class="yqnavs">
+        <view class="invite-nav1">
+          <view class="part03-t01">时间</view>
+          <view class="part03-t02">昵称</view>
+          <view class="part03-t03">收入</view>
+        </view>
+      </view>
+      <view class="" style="margin-top: 2rem; z-index: 2000;">
+        <!-- 模拟数据 -->
+        <!-- <view id="list-content">
+          <view class="invite-nav2">
+            <view class="part03-t01">05-11</view>
+            <view class="part03-t02 yqName">平一指</view>
+            <view class="part03-t03">20</view>
+          </view>
+        </view> -->
+        <view id="list-content" wx:if="{{wdyqData.length > 0}}">
+          <view wx:for="{{wdyqData}}" wx:key="index" data-value="{{item}}" class="invite-nav2">
+            <view class="part03-t01">{{item.create_time}}</view>
+            <view class="part03-t02 yqName">{{item.name}}</view>
+            <view class="part03-t03">{{item.reward}}</view>
+          </view>
+        </view>
+        <view wx:if="{{wdyqData.length == 0}}" class="notopdata">暂无邀请记录</view>
+      </view>
+      <view wx:if="{{wdyqData.length >= 10}}" class="lookMore">已经到底啦</view>
+    </view>
+  </view>
+</popup>
+<!-- 我邀请的人end -->
+<!-- 规则 -->
+<popup id='popup_guize' bind:error="_error_guize" bind:success="_success_guize" main_class="nothing">
+  <image class="guize-view-bimg" src="../../images/activity/guize.png"></image>
+  <view class="guize-view">
+    <view class="guize-view-title">活动规则</view>
+    <view class="guize-view-list">
+      <view class="guize-view-no">1</view>
+      <view class="guize-view-item">活动需下载app参与。</view>
+    </view>
+    <view class="guize-view-list">
+      <view class="guize-view-no">2</view>
+      <view class="guize-view-item">活动期间内，每邀请一位广西区内好友下载且登录APP，即可获得3元微信红包奖励。</view>
+    </view>
+    <view class="guize-view-list">
+      <view class="guize-view-no">3</view>
+      <view class="guize-view-item">您所邀请下载app的人数将计入排行榜，满3人即可获得100元无门槛消费券奖励。</view>
+    </view>
+    <view class="guize-view-list">
+      <view class="guize-view-no">4</view>
+      <view class="guize-view-item">
+        排行榜1至3名可获得1000元、4至6名可获得700元、7至10名可获得500元无门槛消费券奖励。(消费券可在我的优惠券中查看)
+      </view>
+    </view>
+    <view class="guize-view-list">
+      <view class="guize-view-no">5</view>
+      <view class="guize-view-item">奖励数量有限，先到先得！</view>
+    </view>
+  </view>
+</popup>
+<!-- 规则end -->
+<!-- 红包记录 -->
+<popup id='popup_hb' bind:error="_error_hb" bind:success="_success_hb" main_class="nothing">
+  <view class="hb-view">
+    <view class="hb-view-title">
+      <view class="hb-view-title-info">红包记录</view>
+    </view>
+    <view class="hb-view-panel">
+      <view class="hb-view-panel-content">
+        <view class="hb-view-panel-item">
+          <view class="hb-view-panel-item-title">好友注册量</view>
+          <view class="hb-view-panel-item-number">{{hbRecordList.register_num}}</view>
+        </view>
+        <view class="hb-view-panel-item">
+          <view class="hb-view-panel-item-title">好友APP登录量</view>
+          <view class="hb-view-panel-item-number">{{hbRecordList.app_register_num}}</view>
+        </view>
+      </view>
+      <view class="hb-view-panel-tips">
+        <span style="opacity:1;">注：好友通过我分享的活动注册对方可得0.3元，对方登录APP我可得3元。</span>
+      </view>
+    </view>
+    <view class="gz-content hb-record-list">
+      <view class="hb-table-header">
+        <view class="hb-table-header-content">
+          <view class="part03-t01">时间</view>
+          <view class="part03-t03">昵称</view>
+          <view class="part03-t03">好友收入</view>
+          <view class="part03-t03">我的收入</view>
+        </view>
+      </view>
+      <view class="" style="">
+        <view id="hb-list-content" class="hb-list-content">
+          <view wx:if="{{hbRecordList.red_packet_log.length==0}}" class="hb-view-empty">
+            暂无邀请记录
+          </view>
+          <view wx:if="{{hbRecordList.red_packet_log.length>0}}">
+            <view wx:for="{{hbRecordList.red_packet_log}}" wx:key="index" data-value="{{item}}" class="invite-nav2">
+              <view class="part03-t01">{{item.create_time}}</view>
+              <view class="part03-t03">{{item.name}}</view>
+              <view class="part03-t03">{{item.friend_reward}}</view>
+              <view class="part03-t03">{{item.my_reward}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</popup>
+<!-- 红包记录end -->

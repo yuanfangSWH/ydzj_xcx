@@ -1,0 +1,32 @@
+<!--pages/my/set/about/about.wxml-->
+<view>
+  <my-nav title="设置"></my-nav>
+  <view>
+    <image class="about-logo" src="/images/about_logo.png"></image>
+  </view>
+
+  <view class="page-panel" data-value="http://www.ddhi.cn" bindtap="goToWeb">
+    <view class="page-panel-item">
+      <view>访问探电官网</view>
+      <view class="item-subname">www.ddhi.cn</view>
+    </view>
+    <image class="icon-right" src="{{'/images/Path.png'}}"></image>
+  </view>
+
+
+  <view class="page-panel" data-value="service@gxttxs.com" bindtap="copyMail">
+    <view class="page-panel-item">
+      <view>探电官方邮箱</view>
+      <view class="item-subname">service@gxttxs.com</view>
+    </view>
+    <view class="item-subname text-right">点击复制</view>
+  </view>
+
+  <view class="page-panel" data-value="07728808687" bindtap="makePhoneCall">
+    <view class="page-panel-item">
+      <view>客服热线</view>
+      <view class="item-subname">0772-8808687</view>
+    </view>
+    <image class="icon-right" src="{{'/images/Path.png'}}"></image>
+  </view>
+</view>

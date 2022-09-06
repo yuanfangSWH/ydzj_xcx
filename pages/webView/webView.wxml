@@ -1,0 +1,8 @@
+<!--pages/webView/webView.wxml-->
+<view>
+  <topMOD></topMOD>
+  <view class="bit">
+    <image class="return" src="/images/back.png" bindtap="return"></image>
+  </view>
+  <web-view src="{{urls}}"></web-view>
+</view>

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "my-nav": "./component/nav/nav"
+  },
+  "navigationBarTitleText": "设置"
+}

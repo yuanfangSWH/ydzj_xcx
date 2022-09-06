@@ -1,0 +1,18 @@
+<!--pages/details/picture/picture.wxml-->
+<topMOD></topMOD>
+<view class="bit">
+  <image class="return" src="../../../images/back.png" bindtap="return"></image>
+  <view class="juzwenz">商家图册</view>
+</view>
+<view class="quanlm">
+  <view class="jiusrq" wx:for="{{video}}" auto-pause-if-navigate="{{true}}" auto-pause-if-open-native="{{true}}" wx:key="index">
+    <video class="shipincss" src="{{item.path}}" show-play-btn="{{true}}" auto-pause-if-navigate="{{true}}"
+      auto-pause-if-open-native="{{true}}" controls></video></view>
+  <view class="jiusrq" wx:for="{{album}}" wx:key="index" data-value="{{item.path}}" bindtap="fadtp">
+    <image class="shipincss" src="{{item.path}}"></image>
+  </view>
+</view>
+<view class="zhezcheng" style="background: #0a0a0a;" wx:if="{{imgtk}}"></view>
+<view class="wtlmgm" wx:if="{{imgtk}}" bindtap="gbuimg">
+  <image class="dakgimg" src="{{path}}"></image>
+</view>

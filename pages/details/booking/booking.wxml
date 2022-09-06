@@ -1,0 +1,80 @@
+<!--pages/booking/booking.wxml-->
+<topMOD colorData="{{colorData}}"></topMOD>
+<view class="bit">
+  <image class="return" src="../../../images/back.png" bindtap="return"></image>
+  <view class="juzwenz">提交预订</view>
+</view>
+<view class="yuanjzhuang">
+  <view class="kusnr"></view>
+</view>
+<view class="yudin middle">
+  <view class="tilunle">
+    <view class="biaodim">{{bookingData.name}}</view>
+    <view class="aidbzq" wx:if="{{zwxqData!=''}}">预订位置：{{zwxqData.place_name}}（{{zwxqData.min_people_num}}-{{zwxqData.max_people_num}}人）</view>
+    <view class="aidbzq" wx:if="{{bookingData.gb_id!=''}}">预订套餐：{{bookingData.title}}（¥{{bookingData.reference_price/100}}）</view>
+    <view class="aidbzq">预订金额：{{bookingData.deposit<=0?'免预定金':bookingData.deposit}}</view>
+    <view class="aidbzq">最低消费：{{bookingData.basic_price/100}}元（具体以实际到店为准）</view>
+    <view class="aidbzq">预订时间：{{bookingData.reserve_date}} {{reserve_time}}</view>
+    <view class="xuandyhj" wx:if="{{couponsData.receive_id}}">
+      <image class="minma" src="../../../images/miny1.png"></image>
+      <view class="lalatim">
+        <view class="yeaiq">
+          <view class="tiaowz1">{{couponsData.coupon.name}}</view>
+          <view class="tiaowz2">{{couponsData.coupon.use_condition!=''?couponsData.coupon.use_condition:'暂无介绍'}}</view>
+          <view class="tiaowz3">{{couponsData.use_start_time}} - {{couponsData.use_end_time}}</view>
+        </view>
+        <image class="jiantgl2" src="../../../images/Path.png" bindtap="xuanyhjq"></image>
+      </view>
+      <image class="minma" src="../../../images/miny2.png"></image>
+    </view>
+  </view>
+  <view class="yhjxuanz" wx:if="{{!couponsData.receive_id}}">
+    <view class="juanwz">券</view>
+    <view class="juanwz2">优惠券</view>
+    <view class="yhjlqt" wx:if="{{my_coupon_sl>0}}">
+      <view class="nltyz">{{my_coupon_sl}}张可用</view>
+      <image class="niyeyu" src="../../../images/ktjly.png"></image>
+    </view>
+    <view class="yhjlqt" wx:if="{{my_coupon_sl<=0}}">
+      <view class="nltyz">暂无可用</view>
+      <image class="niyeyu" src="../../../images/ktjly2.png"></image>
+    </view>
+    <image class="jiantgl" src="../../../images/Path.png" bindtap="xuanyhjq"></image>
+  </view>
+  <view class="xiangl">
+    <view class="xiangwl1">* 性别</view>
+    <view class="xiangwl2">
+      <view class="xinabab {{gender==1?'xinbz':''}}" style="margin-right: 30rpx;" data-value="1" bindtap="xuanzxb">男</view>
+      <view class="xinabab {{gender==2?'xinbz':''}}" data-value="2" bindtap="xuanzxb">女</view>
+    </view>
+  </view>
+  <view class="xiangl">
+    <view class="xiangwl1">* 联系人</view>
+    <view class="xiangwl2">
+      <input type="text" class="yu-input" maxlength="4" placeholder="请输入你的姓名" bindinput="gefuxiac1" />
+    </view>
+  </view>
+  <view class="xiangl">
+    <view class="xiangwl1">* 联系电话</view>
+    <view class="xiangwl2">
+      <input type="number" class="yu-input" maxlength="12" placeholder="请输入联系电话" bindinput="gefuxiac2" />
+    </view>
+  </view>
+  <view class="liuymk">
+    <textarea type="text" class="ly-input" maxlength="21" placeholder="给商家留言" bindinput="gefuxiac3" />
+    <view class="quetbr middle">{{remark_cd}}/21</view>
+  </view>
+  <view class="wenrourn"><text>* </text>注：如未能按时到场，请提前1小时告知客服。</view>
+</view>
+<view class="lijyan" wx:if="{{bookingData.deposit<=0}}">
+  <view class="rnanbt middle" bindtap="TJyz">立即预约</view>
+</view>
+<view class="yudiny" wx:if="{{bookingData.deposit>0}}">
+ <view class="dengwoa middle">
+  <view class="jingchang">
+    <view class="zhubilwz1">预付定金</view>
+    <view class="zhubilwz2">￥{{bookingData.deposit}}元</view>
+  </view>
+  <view class="aircs" bindtap="TJyz">确定</view>
+ </view>
+</view>

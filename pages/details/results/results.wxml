@@ -1,0 +1,10 @@
+<!--pages/details/results/results.wxml-->
+<topMOD colorData="{{colorData}}"></topMOD>
+<view class="bit">
+  <image class="return" src="../../../images/back.png" bindtap="return"></image>
+  <view class="juzwenz">预订结果</view>
+</view>
+<image src="../../../images/wdfgee.png" class="jlijtimg middle" ></image>
+<view class="limpwz1">您的预订已提交，等待商家确认</view>
+<view class="limpwz2">预约成功后将有短信通知，请注意查收</view>
+<view class="aishuwblj middle" bindtap="return">确认</view>

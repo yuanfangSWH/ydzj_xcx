@@ -1,0 +1,160 @@
+/* pages/my/index.wxss */
+.zhic{
+  width: 100%;
+  height: 80rpx;
+}
+.avatar-box{
+  padding-top:20rpx;
+  padding-left:55rpx;
+  padding-right:55rpx;
+  display: flex;
+  position: relative;
+}
+.avatar-box .avatar{
+  width: 110rpx;
+  height: 110rpx;
+  border-radius: 55rpx;
+}
+.avatar-box .avatar-info{
+  padding-left: 28rpx;
+}
+.avatar-box .avatar-info .name{
+  font-size:40rpx;
+  color:#fff;
+}
+.avatar-box .avatar-info .sub-name{
+  padding-top:10rpx;
+  font-size:28rpx;
+  line-height: 36rpx;
+  color:#8c8c8c;
+}
+.avatar-box .set-btn{
+  width: 41rpx;
+  height: 41rpx;
+  position: absolute;
+  top:55rpx;
+  right:55rpx;
+}
+.service-box{
+  margin:32rpx;
+  padding:50rpx;
+  background: #161616;
+  border-radius: 20rpx;
+  color: #e1e1e1;
+
+}
+.service-box .service-title{
+  color:#e1e1e1;
+  font-size:30rpx;
+}
+.service-box .service-items{
+  display: flex;
+  justify-content:space-between;
+}
+.service-box .service-items .service-item,
+.service-box .service-items .order-item{
+  color: #b8b8b8;
+  line-height: 34rpx;
+  font-size:26rpx;
+  text-align:center;
+  margin-top:65rpx;
+  color: #b8b8b8;
+}
+.yilhdm{
+position: relative;
+}
+.lxiwmkf{
+  width: 110rpx !important;
+  height: 110rpx !important;
+  display: block;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.service-box .service-items .order-item{
+  margin-top:0rpx;
+}
+.service-box .service-items .service-item .service-icon{
+  width: 46rpx;
+  height: 46rpx;
+  margin-bottom: 17rpx;
+}
+.service-box .service-items .order-item .order-icon{
+  width: 76rpx;
+  height: 76rpx;
+  margin-bottom: 17rpx;
+}
+.yijiandl{
+  width: 686rpx;
+  padding-top: 20rpx;
+  padding-bottom: 50rpx;
+  display: flex;
+}
+.anngsz{
+  width: 500rpx;
+  padding-left: 40rpx;
+}
+.tiemdan{
+  font-weight: lighter;
+  font-size: 38rpx;
+  color: #fff!important;
+  width: 160rpx!important;
+  border: 0!important;
+  padding: 0!important;
+  margin: 0!important;
+}
+.honni{
+  width: 16rpx;
+  height: 28rpx;
+  display: block;
+  padding-top: 16rpx;
+  padding-left: 20rpx;
+}
+.gilr{
+  padding-top: 10rpx;
+  font-size: 26rpx;
+  color: #8C8C8C;
+}
+.yijiandl .avatar{
+  width: 110rpx;
+  height: 110rpx;
+  border-radius: 55rpx;
+  margin-left: 20rpx;
+}
+
+.diantstk{
+  width: 500rpx;
+  height: 300rpx;
+  background: #272727;
+  border-radius: 20rpx;
+  position: fixed;
+  top: 120%;
+  left: 50%;
+  margin-left: -250rpx;
+  z-index: 60;
+}
+.tisyol{
+  margin: 60rpx 30rpx 50rpx 30rpx;
+  font-size: 30rpx;
+  color: #fff;
+  text-align: center;
+}
+.agdianc{
+  position: absolute;
+  width: 52rpx;
+  height: 52rpx;
+  background-color: #3f3e3e;
+  right: -14rpx;
+  top: -14rpx;
+  border-radius: 30rpx;
+}
+.niaix{
+  width: 26rpx;
+  height: 26rpx;
+  display: block;
+  padding-top: 14rpx;
+  padding-left: 14rpx;
+}

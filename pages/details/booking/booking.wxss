@@ -1,0 +1,284 @@
+/* pages/booking/booking.wxss */
+page {
+  background-color: #1A1A1A;
+}
+
+.bit {
+  background: #0A0A0A;
+}
+
+.yudin {
+  width: 684rpx;
+}
+
+.tilunle {
+  width: 100%;
+  padding-bottom: 30rpx;
+  border-bottom: 2rpx #2E2E2E solid;
+}
+
+.biaodim {
+  width: 100%;
+  line-height: 92rpx;
+  font-size: 38rpx;
+  text-align: left;
+  color: #ffffff;
+}
+
+.aidbzq {
+  width: 100%;
+  line-height: 50rpx;
+  font-size: 28rpx;
+  text-align: left;
+  color: #B8B8B8;
+}
+
+.yhjxuanz {
+  width: 100%;
+  height: 120rpx;
+  display: flex;
+  border-bottom: 2rpx #2E2E2E solid;
+}
+
+.juanwz {
+  width: 40rpx;
+  height: 40rpx;
+  border: 2rpx solid #ffbe11;
+  border-radius: 8rpx;
+  color: #FFBE11;
+  font-size: 24rpx;
+  line-height: 40rpx;
+  text-align: center;
+  margin-top: 40rpx;
+}
+
+.juanwz2 {
+  flex: 1;
+  line-height: 120rpx;
+  color: #FFBE11;
+  font-size: 32rpx;
+  margin-left: 20rpx;
+}
+
+.jiantgl {
+  width: 16rpx;
+  height: 29rpx;
+  display: block;
+  padding-left: 30rpx;
+  padding-top: 50rpx;
+}
+
+.yhjlqt {
+  width: 142rpx;
+  height: 48rpx;
+  position: relative;
+  margin-top: 40rpx;
+}
+
+.niyeyu {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.nltyz {
+  width: 100%;
+  line-height: 48rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 24rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.xiangl {
+  width: 100%;
+  height: 75rpx;
+  border-bottom: 2rpx #2E2E2E solid;
+  display: flex;
+  padding-top: 25rpx;
+}
+
+.xiangwl1 {
+  width: 180rpx;
+  height: 52rpx;
+  border-right: 2rpx #2E2E2E solid;
+  font-size: 32rpx;
+  color: #E1E1E1;
+  line-height: 52rpx;
+  margin-right: 30rpx;
+}
+
+.xiangwl2 {
+  flex: 1;
+  height: 52rpx;
+  display: flex;
+}
+
+.xinabab {
+  width: 140rpx;
+  height: 52rpx;
+  background: #2e2e2e;
+  border-radius: 26rpx;
+  font-size: 28rpx;
+  color: #B8B8B8;
+  line-height: 52rpx;
+  text-align: center;
+}
+
+.xinbz {
+  background: #FFBE11;
+  color: #0A0A0A;
+}
+
+.yu-input {
+  font-size: 32rpx;
+  color: #fff;
+}
+
+.liuymk {
+  width: 100%;
+  height: auto;
+  background: #2e2e2e;
+  border-radius: 12rpx;
+  margin-top: 40rpx;
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+  margin-bottom: 32rpx;
+}
+
+.ly-input {
+  width: 90%;
+  height: 160rpx;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 32rpxa;
+  color: #fff;
+}
+
+.quetbr {
+  width: 90%;
+  font-size: 26rpx;
+  color: #8C8C8C;
+  text-align: right;
+}
+
+.wenrourn {
+  width: 100%;
+  color: #8C8C8C;
+  font-size: 26rpx;
+  padding-bottom: 110rpx;
+}
+
+.wenrourn text {
+  color: #FFBE11;
+  font-size: 32rpx;
+}
+
+.lijyan {
+  width: 100%;
+  height: 110rpx;
+}
+
+.rnanbt {
+  width: 686rpx;
+  height: 80rpx;
+  background: #ffbe11;
+  border-radius: 20rpx;
+  text-align: center;
+  font-size: 34rpx;
+  color: #0A0A0A;
+  line-height: 80rpx;
+}
+
+.yudiny {
+  width: 100%;
+  height: 150rpx;
+  border-top: 2rpx #2E2E2E solid;
+}
+
+.dengwoa {
+  width: 686rpx;
+  padding-top: 40rpx;
+  display: flex;
+}
+
+.jingchang {
+  flex: 1;
+}
+
+.zhubilwz1 {
+  font-size: 24rpx;
+  color: #B8B8B8;
+}
+
+.zhubilwz2 {
+  font-size: 40rpx;
+  color: #FFBE11;
+}
+
+.aircs {
+  width: 200rpx;
+  height: 80rpx;
+  background: #ffbe11;
+  border-radius: 40rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 32rpx;
+  color: #0A0A0A;
+}
+
+.xuandyhj {
+  width: 100%;
+  height: 160rpx;
+  padding-top: 30rpx;
+  display: flex;
+}
+
+.minma {
+  width: 32rpx;
+  height: 160rpx;
+  display: block;
+}
+
+.lalatim {
+  flex: 1;
+  height: 160rpx;
+  background: #2e2e2e;
+  display: flex;
+}
+
+.jiantgl2 {
+  width: 16rpx;
+  height: 29rpx;
+  display: block;
+  padding-right: 26rpx;
+  padding-top: 66rpx;
+}
+
+.yeaiq {
+  flex: 1;
+  margin-left: 26rpx;
+}
+
+.tiaowz1 {
+  width: 400rpx;
+  color: #fff;
+  font-size: 32rpx;
+  padding-top: 15rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tiaowz2 {
+  color: #8C8C8C;
+  font-size: 26rpx;
+  line-height: 40rpx;
+}
+
+.tiaowz3 {
+  color: #8C8C8C;
+  font-size: 24rpx;
+  line-height: 40rpx;
+}

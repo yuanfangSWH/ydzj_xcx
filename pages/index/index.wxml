@@ -1,0 +1,78 @@
+<!--index.wxml-->
+<view>
+  <topMOD id='topMOD'></topMOD>
+  <!-- 头部 -->
+  <view class="top-chen">
+    <topMOD id='topMOD'></topMOD>
+    <view class="search middle">
+    <view class="dizdinw" bindtap="cityTZ">
+      <view>{{city}}</view>
+      <image class="xialjt" src="../../images/xialjt.png"></image>
+    </view>
+    <view class="shourq" bindtap="Search">
+      <image class="shous" src="../../images/luigjss.png"></image>
+    </view>
+  </view>
+  </view>
+  <!-- 幻灯片 -->
+  <view class="slide middle">
+    <swiper class="swiper" indicator-dots="{{advertising.ads>1?true:false}}" autoplay="true"
+      interval="{{advertising.stay_time}}">
+      <swiper-item wx:for="{{advertising.ads}}" wx:key="index" bindtap="BannerBindtap">
+        <image wx:if="{{!item.href}}" class="slideimg" src="{{item.content}}"></image>
+        <image wx:if="{{item.href}}" class="slideimg" src="{{item.content}}" data-value="4" data-url="{{item.href}}"
+      bindtap="container"></image>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!-- 导航 -->
+  <view class="daoh">
+    <view class="ulwei" wx:for="{{classification}}" wx:key="index" data-value="{{item.type_id}}" bindtap="shopTZ">
+      <image class="yduiytb middle" src="{{item.icon}}"></image>
+      <view class="liwenz">{{item.name}}</view>
+    </view>
+  </view>
+  <!-- 广告位 -->
+  <image class="gifIMG middle" wx:if="{{index_middle.ads[0].content}}" src="{{index_middle.ads[0].content}}"
+    bindtap="activityF"></image>
+  <!-- 猜你喜欢 -->
+  <view class="cainbt middle">
+    <view class="btwz1">猜你喜欢</view>
+    <view class="btwz2" bindtap="morelistTZ">更多</view>
+  </view>
+  <view class="dianlie middle">
+    <view class="tick" wx:if="{{storeData && storeData.length > 0}}" wx:for="{{storeData}}" wx:key="index" data-value="{{item}}" bindtap="detailsTZ">
+      <view class="vrqj" wx:if="{{item.vr}}">VR全景</view>
+      <image class="expect" src="{{item.logo}}"></image>
+      <view class="topic middle">{{item.name}}</view>
+      <view class="stars middle">
+        <view class="xing">
+          <image class="xinimg {{item.score<1?'huise':''}}" src="../../images/dawjltb.png"></image>
+          <image class="xinimg {{item.score<2?'huise':''}}" src="../../images/dawjltb.png"></image>
+          <image class="xinimg {{item.score<3?'huise':''}}" src="../../images/dawjltb.png"></image>
+          <image class="xinimg {{item.score<4?'huise':''}}" src="../../images/dawjltb.png"></image>
+          <image class="xinimg {{item.score<5?'huise':''}}" src="../../images/dawjltb.png"></image>
+        </view>
+        <view class="lian">{{item.type_name}}</view>
+      </view>
+      <view class="prices middle">
+        <view class="xins">￥{{item.basic_price/100}}</view>
+        <view class="gaodon">{{item.distance}}</view>
+      </view>
+    </view>
+    <view class="noneBox" wx:if="{{!storeData || storeData.length == 0}}">
+      <view class="img-no">
+        <image class="indexNone" src="../../images/index_none.png"></image>
+      </view>
+      <view class="noneText">~目前暂无商家数据哦~</view>
+    </view>
+  </view>
+  <!-- 悬浮返回 -->
+  <image class="fangdinbu" wx:if="{{storeData.length>10}}" src="../../images/fangdinbu.png" bindtap="jumpWZ"></image>
+  <!-- 活动弹框 -->
+  <view class="zhezcheng" wx:if="{{activitytk}}"></view>
+  <view class="huojtzs" wx:if="{{activitytk}}">
+    <image class="activityimg" src="{{activityData.layer_img}}" bindtap="activityF"></image>
+    <image class="activityimgxx" src="../../images/niltmx.png" bindtap="gbhdtk"></image>
+  </view>
+</view>

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "topMOD": "/component/topMOD/topMOD",
+    "reserve-cancel": "../component/ReserveCancel/ReserveCancel"
+  },
+  "navigationBarTitleText": "预订订单"
+}

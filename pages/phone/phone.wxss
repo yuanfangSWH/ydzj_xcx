@@ -1,0 +1,149 @@
+/* pages/phone/phone.wxss */
+.bit {
+  width: 100%;
+  height: 100rpx;
+}
+.return {
+  width: 38rpx;
+  height: 38rpx;
+  display: block;
+  padding: 28rpx 0 0 30rpx;
+}
+.haiyin {
+  width: 560rpx;
+  height: auto;
+  padding-bottom: 100rpx;
+}
+
+.jilyis {
+  width: 100%;
+  height: 56rpx;
+  line-height: 56rpx;
+  font-size: 40rpx;
+  color: #fff;
+  padding-top:40rpx;
+}
+
+.dousyiy {
+  width: 100%;
+  height: 116rpx;
+  border-bottom: 2rpx #313131 solid;
+  display: flex;
+  margin-bottom: 10rpx;
+}
+
+.dianhqz {
+  width: 15%;
+  height: 100%;
+  line-height: 116rpx;
+  color: #fff;
+  font-size: 34rpx;
+}
+
+.shukdh {
+  width: 85%;
+  height: 100%;
+}
+
+.temd-input {
+  width: 100%;
+  height: 100%;
+  font-size: 34rpx;
+  color: #fff;
+}
+
+.shukyzm {
+  flex: 1;
+  height: 100%;
+}
+
+.huoqyzm {
+  width: 200rpx;
+  height: 60rpx;
+  border: 2rpx #FFBE11 solid;
+  border-radius: 32rpx;
+  margin-left: 20rpx;
+  margin-top: 26rpx;
+  line-height: 60rpx;
+  color: #FFBE11;
+  text-align: center;
+  font-size: 26rpx;
+}
+
+.xingbiet {
+  width: 100%;
+  height: 300rpx;
+}
+
+.huiyi1 {
+  float: left;
+  padding-top: 40rpx;
+}
+
+.huiyi2 {
+  float: right;
+  padding-top: 40rpx;
+}
+
+.zgstyx {
+  width: 180rpx;
+  height: 180rpx;
+  display: block;
+}
+
+.wenlxie {
+  width: 100%;
+  line-height: 90rpx;
+  font-size: 30rpx;
+  text-align: center;
+  color: #fff;
+}
+.huise{
+  filter:grayscale(100%);
+}
+.picker {
+  width: 560rpx;
+  height: 116rpx;
+  line-height: 116rpx;
+  font-size: 34rpx;
+  color: #fff;
+  letter-spacing:8rpx
+}
+.picker p{
+  color: #8C8C8C;
+}
+.srbt{
+  margin-bottom: 20rpx;
+}
+.sfaxsw{
+  width: 100%;
+  display: flex;
+  padding-top: 30rpx;
+  margin-bottom: 80rpx;
+}
+.gouan{
+  width: 50rpx;
+  height: 50rpx;
+}
+.bitjdxy{
+  flex: 1;
+  line-height: 40rpx;
+  font-size: 26rpx;
+  color: #8C8C8C;
+}
+.bitjdxy p{
+  color: #FFBE11;
+}
+.checkbox{
+  transform: scale(0.6,0.6);
+}
+.tiyan{
+  width: 560rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #0a0a0a;
+  background:#FFBE11;
+  text-align: center;
+  border-radius: 40rpx;
+  font-size: 34rpx;
+}

@@ -1,0 +1,38 @@
+/* pages/my/preferentialwc/preferentialwc.wxss */
+page {
+  background-color: #1A1A1A;
+}
+
+.bit {
+  background: #0A0A0A;
+}
+.logrt{
+  width: 330rpx;
+  height: 330rpx;
+  display: block;
+  padding-top: 256rpx;
+  padding-bottom: 22rpx;
+}
+.wilt1{
+width: 100%;
+font-size: 40rpx;
+color: #FFFFFF;
+text-align: center;
+}
+.wilt2{
+  width: 100%;
+  font-size: 30rpx;
+  color: #FFFFFF;
+  text-align: center;
+  margin-bottom: 40rpx;
+}
+.wilt3{
+  width: 320rpx;
+  height: 60rpx;
+  background: #ffbe11;
+  border-radius: 30rpx;
+  font-size: 28rpx;
+  color: #0A0A0A;
+  text-align: center;
+  line-height: 60rpx;
+}

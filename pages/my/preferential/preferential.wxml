@@ -1,0 +1,34 @@
+<!--pages/details/preferential/preferential.wxml-->
+<topMOD id='topMOD' colorData="{{colorData}}"></topMOD>
+<view class="bit">
+  <image class="return" src="../../../images/back.png" bindtap="return"></image>
+  <view class="juzwenz">我的优惠券</view>
+</view>
+<view class="yuanjzhuang">
+  <view class="kusnr"></view>
+</view>
+<view class="wxtaok middle">
+  可用券（{{storeData.length}}）
+</view>
+<view class="xuandyhj middle" wx:for="{{storeData}}" wx:key="index" data-value="{{item}}">
+  <image class="minma" src="../../../images/miny1.png"></image>
+  <view class="lalatim">
+    <view class="yeaiq">
+      <view class="tiaowz1">{{item.coupon.name}}</view>
+      <view class="tiaowz2">{{item.coupon.use_condition!=''?item.coupon.use_condition:'暂无介绍'}}</view>
+      <view class="tiaowz3">{{item.use_start_time}} - {{item.use_end_time}}</view>
+    </view>
+    <view class="jiantgl2" data-value="{{item.coupon.shop}}" bindtap="detailsTZ" wx:if="{{item.status==1}}">去使用</view>
+    <view class="jiantgl2 jiantgl3" wx:if="{{item.status==3}}">已过期</view>
+    <view class="jiantgl2 jiantgl3" wx:if="{{item.status==2}}">已使用</view>
+  </view>
+  <image class="minma" wx:if="{{item.status==1}}" src="../../../images/miny3.png"></image>
+  <image class="minma" wx:if="{{item.status!=1}}" src="../../../images/miny4.png"></image>
+</view>
+<!-- 无优惠券 -->
+<view class="wuylhq middle" wx:if="{{storeData.length<=0}}">
+  <image class="meijuq" src="../../../images/meijuq.png"></image>
+  <text>暂无优惠券</text>
+</view>
+<!-- 悬浮返回 -->
+<image class="fangdinbu" wx:if="{{storeData.length>10}}" src="../../images/fangdinbu.png" bindtap="jumpWZ"></image>

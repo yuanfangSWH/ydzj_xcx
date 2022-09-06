@@ -1,0 +1,22 @@
+<!--pages/details/parking/parking.wxml-->
+<topMOD colorData="{{colorData}}"></topMOD>
+<view class="top-chen">
+  <topMOD></topMOD>
+  <view class="bit">
+    <image class="return" src="../../../images/back.png" bindtap="return"></image>
+    <view class="juzwenz">附近停车场</view>
+  </view>
+</view>
+<view class="yuanjzhuang">
+  <view class="kusnr"></view>
+</view>
+<view class="tingmlm middle" wx:for="{{parkingData}}" wx:key="index">
+  <view class="hanl1">
+    <image class="tcldimg" src="../../../images/tcld.png"></image>
+    <view class="dialmz">{{item.name}}</view>
+    <view class="sdalkr">{{item.distance_desc}}</view>
+  </view>
+  <view class="hanl2">
+    {{item.address}}
+  </view>
+</view>

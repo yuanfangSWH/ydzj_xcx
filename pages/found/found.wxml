@@ -1,0 +1,33 @@
+<!--pages/found/found.wxml-->
+<topMOD id='topMOD'></topMOD>
+<view class="daoh">
+  <view class="tiebai" style="width:{{widthData}}">
+    <view class="iltext {{classificationID==item.mid?'xuanz':''}}" wx:for="{{classification}}" wx:key="index"
+      data-value="{{item.mid}}" bindtap="xuanzfenl">{{item.name}}</view>
+  </view>
+</view>
+<view style="margin-bottom: 100rpx;">
+  <view class="jiaowmzm middle" wx:for="{{information}}" wx:key="index">
+    <view class="biaotm" data-value="{{item.news_id}}" bindtap="detailsF">{{item.title}}</view>
+    <view class="baijiuj" wx:if="{{item.list_shape==1}}">
+      <image class="tiebdt" mode="aspectFill" src="{{item.images[0]}}" data-value="{{item.news_id}}" bindtap="detailsF"></image>
+    </view>
+    <view class="baijiuj" wx:if="{{item.list_shape==2}}" data-value="{{item.news_id}}" bindtap="detailsF">
+      <image class="tiebdt2" mode="heightFix" src="{{item.images[0]}}"></image>
+      <image class="tiebdt2" mode="heightFix" src="{{item.images[1]}}"></image>
+      <image class="tiebdt2" mode="heightFix" src="{{item.images[2]}}"></image>
+    </view>
+    <view class="baijiuj" wx:if="{{item.list_shape==3}}">
+      <video class="ship"
+        src="{{item.video.ORI.path}}"
+        poster="{{item.video.ORI.cover}}"
+        show-play-btn="{{true}}" auto-pause-if-navigate="{{true}}" auto-pause-if-open-native="{{true}}" controls></video>
+    </view>
+    <view class="bottmcss">
+      <view class="biaoq" wx:for="{{item.tag}}" wx:for-item="bq" wx:key="index">{{bq.name}}</view>
+      <view class="shijianrq">{{item.create_time}}</view>
+    </view>
+  </view>
+</view>
+<!-- 悬浮返回 -->
+<image class="fangdinbu" wx:if="{{information.length>11}}" src="../../images/fangdinbu.png" bindtap="jumpWZ"></image>

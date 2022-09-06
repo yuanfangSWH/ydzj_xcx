@@ -1,0 +1,18 @@
+<!--pages/activity/envelope/envelope.wxml-->
+<topMOD colorData="{{colorData}}"></topMOD>
+<view class="bit">
+  <view class="juzwenz">你获得了红包</view>
+</view>
+<!-- 红包 -->
+<view class="yuluotzhib">
+  <button class="honbbutton" type="primary" bindtap="loginDataF"></button>
+  <image src="../../../images/activity/dahonbao.png" class="haimysx"></image>
+  <view class="fangqzhui">
+    <view class="bxlnb">
+      <image src="../../../images/activity/ydalgo.png" class="ydalgo"></image>
+      <view class="nijlt">送你一个红包</view>
+    </view>
+    <view class="duolgljm">恭喜发财，大吉大利</view>
+    <view class="fdgk">微信现金红包直接到账</view>
+  </view>
+</view>

@@ -1,0 +1,22 @@
+<!--component/ActionSheet.wxml-->
+<view class="cover-view" style="display:{{showInfo}}">
+    <view class="items">
+      
+      <view class="ctrl">
+        <view class="btn-cancel" bindtap="close">取消</view>
+        <view class="btn-ok" bindtap="selectOk">确定 </view>
+      </view>
+
+      <picker-view class="item-list" indicator-class="item-select-box" mask-class="item-select-mask" bindchange="selectItem">
+        <picker-view-column class="picker-box">
+          <view wx:for="{{items}}" wx:key="index" data-index="{{index}}" wx:for-index="index" class="aitem">{{item.itemName}}</view>
+        </picker-view-column>
+      </picker-view>
+      <!-- <view class="item-list">
+        <view class="item" wx:for="{{items}}" wx:key="index" data-index="{{index}}" wx:for-index="index" bindtap="selectItem">
+          <view class="item-title">{{item.itemName}}</view>
+          <image wx:if="{{itemIndex==index}}" class="item-check" src="../../images/checked.png" />
+        </view>
+      </view> -->
+    </view>
+</view>

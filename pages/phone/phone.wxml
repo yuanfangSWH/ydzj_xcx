@@ -1,0 +1,49 @@
+<!--pages/phone/phone.wxml-->
+<topMOD></topMOD>
+<view class="bit">
+  <image class="return" src="../../images/back.png" bindtap="return"></image>
+</view>
+<view class="haiyin middle">
+  <view class="jilyis">快速注册</view>
+  <view class="dousyiy">
+    <view class="dianhqz">+86</view>
+    <view class="shukdh"><input class="temd-input" type="number" maxlength="11" placeholder="请输入手机号"
+        bindinput="phoneData" /></view>
+  </view>
+  <view class="dousyiy">
+    <view class="shukyzm"><input class="temd-input" type="number" maxlength="6" placeholder="请输入验证码"
+        bindinput="validationData" /></view>
+    <view class="huoqyzm" bindtap="huodeyzm">{{donhwenz}}</view>
+  </view>
+  <view class="jilyis">请选择性别</view>
+  <view class="xingbiet">
+    <view class="huiyi1" data-value="1" bindtap="genderF">
+      <image class="zgstyx {{gender!=1?'huise':''}}" src="../../images/nantx.png"></image>
+      <view class="wenlxie">我是男生</view>
+    </view>
+    <view class="huiyi2" data-value="2" bindtap="genderF">
+      <image class="zgstyx {{gender!=2?'huise':''}}" src="../../images/nvtx.png"></image>
+      <view class="wenlxie">我是女生</view>
+    </view>
+  </view>
+  <view class="jilyis srbt">设置生日（年龄大于18岁）</view>
+  <view class="dousyiy">
+    <picker mode="date" value="{{birthdayBF}}" start="1900-01-01" end="2003-12-31" bindchange="bindDateChange">
+      <view class="picker">
+        <p wx:if="{{birthday==''}}">请选择日期</p>{{birthday}}
+      </view>
+    </picker>
+  </view>
+  <view class="sfaxsw">
+    <view class="gouan">
+      <checkbox-group bindchange="checkboxChange">
+        <label>
+          <checkbox class="checkbox" value="1" />
+        </label>
+      </checkbox-group>
+    </view>
+    <view class="bitjdxy">我已充分理解并同意<p bindtap="showAgreement1">用户协议</p>和<p bindtap="showAgreement2">隐私政策</p>中的各项协议</view>
+  </view>
+  <view class="tiyan" bindtap="tijiao" wx:if="{{activity==0}}">开始体验</view>
+  <view class="tiyan" bindtap="tijiao" wx:if="{{activity==1}}">填好了，领取红包</view>
+</view>

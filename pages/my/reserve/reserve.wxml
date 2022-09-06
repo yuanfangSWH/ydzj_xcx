@@ -1,0 +1,84 @@
+<!--pages/my/reserve/reserve.wxml-->
+<topMOD colorData="{{colorData}}"></topMOD>
+<view class="bit">
+  <image class="return" src="../../../images/back.png" bindtap="return"></image>
+</view>
+<view class="page-view">
+  <!-- tabs -->
+  <view class="fix-box">
+    <view class="tabs">
+      <view wx:for="{{tabs}}" wx:key="index" data-index="{{index}}" class="tab {{activeTab==index ? 'tab-active' : ''}}"
+        bindtap="handleTabsChange">
+        {{item.title}}
+      </view>
+    </view>
+  </view>
+  <view class="tab-content">
+    <view wx:for="{{tabs[activeTab].items}}" wx:for-item="orderItem" wx:for-index="idx" wx:key="idx" class="abox">
+      <!-- 预定title -->
+      <view class="order-title" data-item="{{orderItem}}" bindtap="goReservInfo">
+        <!-- 店铺名称 -->
+        <view class="shop-info">
+          <image class="list-icon" src="{{'../../../images/order'+(orderItem.status_type+1)+'.png'}}"></image>
+          <view class="list-name">{{orderItem.shop_name}}</view>
+        </view>
+
+        <!-- 订单状态 -->
+        <view class="status-info">
+          <image class="time-icon" wx:if="{{orderItem.status_type==1}}" src="../../../images/clock.png"></image>
+          <view class="time-info" wx:if="{{orderItem.status_type==1}}">{{orderItem.arrive_time}}</view>
+          <view class="status-name" wx:if="{{orderItem.status_type==1}}">预约中</view>
+          <view class="status-name" wx:if="{{orderItem.status_type==2}}">已预约</view>
+          <view class="status-name" wx:if="{{orderItem.status_type==3}}">已取消</view>
+        </view>
+      </view>
+
+
+      <!-- 预约信息 -->
+      <view class="order-info" data-item="{{orderItem}}" bindtap="goReservInfo">
+        <image class="shop-logo" src="{{orderItem.shop.logo}}"></image>
+        <view class="order-items">
+          <view class="order-item">
+            <image class="item-icon" src="../../../images/clock1.png"></image>
+            <view class="item-info">
+              预订时间：{{orderItem.reserve_time}}
+            </view>
+          </view>
+
+          <view class="order-item">
+            <image class="item-icon" src="../../../images/place.png"></image>
+            <view class="item-info">
+              预订类型：{{orderItem.place_type_name}} ({{orderItem.place.place_type.min_people_num}}-{{orderItem.place.place_type.max_people_num}}人)
+            </view>
+          </view>
+
+          <view class="order-item">
+            <image class="item-icon" src="../../../images/reserve_money.png"></image>
+            <view class="item-info">
+              预定金额：¥ {{orderItem.total_money==0?'免预订金':orderItem.total_money}}
+            </view>
+          </view>
+
+          <view wx:if="{{orderItem.status_type==3}}" class="order-item">
+            <view class="order-cancel">取消原因：{{orderItem.cancel_reason}}</view>
+          </view>
+        </view>
+      </view>
+
+
+      <!-- 操作 -->
+      <view class="order-tools">
+        <button wx:if="{{orderItem.status_type<3}}" class="btn-line" data-set="{{orderItem}}" plain bindtap="handleOrderCancel">取消订单</button>
+        <button wx:if="{{orderItem.status_type==3}}" class="btn-line" data-set="{{orderItem}}" plain bindtap="handleOrderDelete">删除订单</button>
+      </view>
+
+    </view>
+  </view>
+  <reserve-cancel active="{{reasonDialog}}" bind:selected="reserveCancelOk" bind:closed="reserveCancelClosed"></reserve-cancel>
+  <mp-dialog title="删除" show="{{deleteReserveDialog}}" bindbuttontap="handleDeleteReserveDialog" buttons="{{[{text: '取消'}, {text: '确认'}]}}">
+    <view class="dialog-content">确定永久删除预订吗？</view>
+  </mp-dialog>
+
+
+  
+</view>

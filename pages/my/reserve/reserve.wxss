@@ -1,0 +1,143 @@
+/* pages/my/reserve/reserve.wxss */
+page {
+  background-color: #1a1a1a !important;
+}
+.bit{
+  background-color: #0a0a0a !important;
+}
+.page-view {
+  top: 0rpx;
+  left: 0rpx;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  background: #1a1a1a;
+  padding: 0rpx 0rpx 50% 0rpx;
+  color: #fff;
+  
+}
+
+.fix-box {
+  /* position: fixed; */
+  width: 100vw;
+  z-index: 999;
+  background-color: #0a0a0a !important;
+}
+
+.tabs {
+  background: #1a1a1a;
+  display: flex;
+  justify-content: space-between;
+  padding: 50rpx 36rpx 0rpx 36rpx !important;
+  border-radius: 40rpx 40rpx 0rpx 0rpx;
+  padding-top:40rpx;
+}
+
+.tab-active {
+  color: #FFBE11 !important;
+  border-bottom-color: #FFBE11 !important;
+}
+
+.tabs .tab {
+  display: inline-block;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: transparent;
+  padding-bottom: 32rpx;
+  font-size: 32rpx;
+}
+
+.tab-content {
+  padding: 58rpx 32rpx 0rpx 32rpx;
+}
+
+.abox {
+  background: #212121;
+  padding: 40rpx;
+  margin-bottom: 32rpx;
+}
+
+.abox .order-title {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 25rpx;
+  border-bottom: 2px solid #2E2E2E;
+}
+
+.abox .shop-info {
+  display: flex;
+  font-size: 32rpx;
+}
+
+.abox .shop-info .list-icon {
+  width: 44rpx;
+  height: 44rpx;
+}
+
+.abox .shop-info .list-name {
+  margin-left: 18rpx;
+}
+
+.abox .status-info {
+  display: flex;
+  font-size: 26rpx;
+  color: #FFBE11
+}
+
+.abox .status-info .time-icon {
+  width: 22rpx;
+  height: 22rpx;
+  margin-top: 13rpx;
+}
+
+.abox .status-info .time-info {
+  font-size: 24rpx;
+  margin: 8rpx 0rpx 0rpx 10rpx;
+}
+
+.abox .status-info .status-name {
+  font-size: 26rpx;
+  margin: 7rpx 0rpx 0rpx 10rpx;
+}
+
+.abox .order-info,
+.abox .order-tools {
+  margin: 27rpx 0rpx 0rpx 0rpx;
+  display: flex;
+}
+
+.abox .order-info .shop-logo {
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 5px;
+}
+
+.abox .order-info .order-items {
+  margin: 0rpx 0rpx 0rpx 22rpx;
+  font-size: 28rpx;
+  color: #b8b8b8;
+  line-height: 48rpx;
+}
+
+.abox .order-info .order-items .order-item {
+  display: flex;
+}
+
+.abox .order-info .order-items .order-item .item-icon {
+  margin-top: 10rpx;
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.abox .order-info .order-items .order-item .item-info {
+  margin-left: 10rpx;
+}
+
+.abox .order-info .order-items .order-item .order-cancel {
+  font-size: 26rpx;
+  color: #7e7e7e;
+}
+
+.order-tools {
+  justify-content: flex-end;
+}

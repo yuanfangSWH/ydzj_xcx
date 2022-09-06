@@ -1,0 +1,78 @@
+/* pages/activity/envelope/envelope.wxss */
+page {
+  background-color: #0A0A0A;
+}
+
+.bit {
+  background: #0A0A0A;
+}
+
+.yuluotzhib {
+  width: 544rpx;
+  height: 726rpx;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -363rpx;
+  margin-left: -272rpx;
+}
+
+.haimysx {
+  width: 544rpx;
+  height: 726rpx;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+}
+
+.fangqzhui {
+  width: 544rpx;
+  height: 726rpx;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 30;
+}
+
+.bxlnb {
+  padding-top: 90rpx;
+  padding-bottom: 60rpx;
+  display: flex;
+}
+
+.ydalgo {
+  width: 52rpx;
+  height: 52rpx;
+  display: block;
+  margin-right: 12rpx;
+  margin-left: 144rpx;
+}
+
+.nijlt {
+  line-height: 52rpx;
+  font-size: 32rpx;
+  color: #E3C595;
+}
+.duolgljm{
+  width: 100%;
+  font-size: 44rpx;
+  color: #E3C595;
+  text-align: center;
+  margin-bottom: 370rpx;
+}
+.fdgk{
+  width: 100%;
+  font-size: 28rpx;
+  color: #E3C595;
+  text-align: center;
+}
+.honbbutton{
+  width: 100%;
+  height: 370rpx;
+  margin-top: 356rpx;
+  opacity: 0;
+  z-index: 40;
+}

@@ -1,0 +1,23 @@
+.dialog-content .radio-item {
+  font-size:32rpx;
+  padding: 15rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dialog-content .radio-item .radio {
+  margin-top:5rpx;
+  width: 32rpx;
+  height: 32rpx;
+}
+
+.dialog-content .other-item {
+  width: auto;
+  height: 120rpx;
+  margin: 32rpx 32rpx 0rpx 32rpx;
+  padding: 32rpx;
+  background: #2e2e2e;
+  color: #8c8c8c;
+  border-radius: 12rpx;
+  text-align: left;
+}

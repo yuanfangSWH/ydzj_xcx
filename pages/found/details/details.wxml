@@ -1,0 +1,47 @@
+<!--pages/found/details/details.wxml-->
+<topMOD></topMOD>
+<view class="bit">
+  <image class="return" src="../../../images/back.png" bindtap="return"></image>
+</view>
+<view class="baijiuj" wx:if="{{detailsData.video&&detailsData.video!=''}}">
+  <video class="ship" src="{{detailsData.video.ORI.path}}" poster="{{detailsData.video.ORI.cover}}" auto-pause-if-navigate="{{true}}" auto-pause-if-open-native="{{true}}" show-play-btn="{{true}}" controls></video>
+</view>
+<view class="yulzj middle">
+  <view class="haipadr">
+    {{detailsData.title}}
+  </view>
+  <view class="cgeini">
+    <view class="biaot" wx:for="{{tag}}" wx:key="index">{{item.name}}</view>
+    <view class="fazhi">{{detailsData.create_time}}</view>
+  </view>
+  <view class="likaini">
+    <rich-text nodes="{{detailsData.content}}"></rich-text>
+  </view>
+  <view class="kels">
+    <view class="yuejdu">阅读{{detailsData.view_count}}</view>
+    <image class="dblliuz" src="../../../images/ydl.png"></image>
+  </view>
+  <view class="ohw" wx:if="{{storeData!=''}}">相关提及</view>
+  <view class="weizhimt">
+    <view class="neitianc" wx:for="{{storeData}}" wx:key="index" data-value="{{item}}" bindtap="detailsTZ">
+      <image class="zhexie" src="{{item.logo}}"></image>
+      <view class="erduo">
+        <view class="topic">{{item.name}}</view>
+        <view class="stars">
+          <view class="xing">
+            <image class="xinimg {{item.score<1?'huise':''}}" src="../../../images/dawjltb.png"></image>
+            <image class="xinimg {{item.score<2?'huise':''}}" src="../../../images/dawjltb.png"></image>
+            <image class="xinimg {{item.score<3?'huise':''}}" src="../../../images/dawjltb.png"></image>
+            <image class="xinimg {{item.score<4?'huise':''}}" src="../../../images/dawjltb.png"></image>
+            <image class="xinimg {{item.score<5?'huise':''}}" src="../../../images/dawjltb.png"></image>
+          </view>
+          <view class="lian">{{item.type_name}}</view>
+        </view>
+        <view class="prices">
+          <view class="xins">人均￥{{item.basic_price}}</view>
+          <view class="gaodon">{{item.distance}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

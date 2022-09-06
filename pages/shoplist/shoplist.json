@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "screening-II": "/component/screeningII/screeningII",
+    "topMOD": "/component/topMOD/topMOD"
+  },
+  "enablePullDownRefresh":true
+}

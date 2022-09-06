@@ -1,0 +1,25 @@
+/* pages/my/helper/helper.wxss */
+.items{
+  padding-top:20rpx;
+  padding-bottom:20rpx;
+  font-size: 32rpx;
+  font-weight: 400;
+  text-align: left;
+  color: #b8b8b8;
+  line-height: 36rpx;
+}
+.items .item{
+  display: flex;
+  padding:26rpx 32rpx 26rpx 32rpx;
+}
+.items .item .title{
+  width: 95%;
+  white-space: nowrap;  
+  text-overflow:ellipsis; 
+  overflow:hidden;
+}
+.items .item .input-icon{
+  padding: 10rpx 0rpx 10rpx 16rpx;
+  width:16rpx;
+  height: 20rpx;
+}

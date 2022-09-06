@@ -1,0 +1,42 @@
+/* pages/my/set/about/about.wxss */
+.about-logo {
+  width: 348rpx;
+  height: 118rpx;
+  /* margin: 128rpx 250rpx 98rpx 252rpx; */
+  margin: 100rpx 250rpx 120rpx 200rpx
+}
+
+.page-panel {
+  display: flex;
+  justify-content: space-between;
+  padding: 0rpx 32rpx 32rpx 32rpx;
+  font-size: 30rpx;
+  font-weight: 400;
+  text-align: left;
+  color: #e1e1e1;
+  line-height: 34rpx;
+}
+
+.page-panel-item {
+  padding: 26rpx 32rpx 0rpx 32rpx;
+}
+
+.page-panel .item-subname {
+  margin-top: 15rpx;
+  color: #8C8C8C;
+  font-size: 26rpx;
+}
+
+.page-panel .icon-right {
+  padding-top: 45rpx;
+  padding-bottom: 43rpx;
+  width: 16rpx;
+  height: 30rpx;
+}
+
+.page-panel .text-right {
+  padding-top: 35rpx;
+  padding-bottom: 43rpx;
+  width: auto;
+  height: 30rpx;
+}

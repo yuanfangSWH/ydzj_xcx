@@ -1,0 +1,39 @@
+<view>
+  <topMOD colorData="{{colorData}}"></topMOD>
+<view class="bit">
+  <image class="return" src="../../../../images/back.png" bindtap="return"></image>
+  <view class="juzwenz">编辑资料</view>
+</view>
+<view class="bnlifk middle">
+  <view class="glpdq1">昵称</view>
+  <view class="glpdq2">
+    <input class="clmomrf" value="{{nickname}}"  placeholder="请输入昵称" bindchange="bindPickerChange"  />
+  </view>
+</view>
+<view class="bnlifk middle">
+  <view class="glpdq1">生日</view>
+  <view class="glpdq2">
+    <picker mode="date" value="{{birthday}}" start="1950-01-01" end="2050-01-01" bindchange="bindDateChange">
+    <view class="picker">{{birthday!=''?birthday:'请选择出生日期'}}
+    </view>
+  </picker>
+  </view>
+</view>
+<view class="bnlifk middle">
+  <view class="glpdq1">年龄</view>
+  <view class="glpdq2">
+    {{age}}岁
+  </view>
+</view>
+<view class="bnlifk middle">
+  <view class="glpdq1">星座</view>
+  <view class="glpdq2">
+    {{constellation!=''?constellation:'未填写'}}
+  </view>
+</view>
+  
+<view class="zheguas">
+  <view class="narhg middle" bindtap="submitproflie">保存</view>
+</view>
+  
+</view>

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "screening-TAB": "/component/screeningTAB/screeningTAB",
+    "topMOD": "/component/topMOD/topMOD"
+  },
+  "enablePullDownRefresh":true
+}

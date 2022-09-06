@@ -1,0 +1,66 @@
+/* pages/details/parking/parking.wxss */
+page {
+  background-color: #1A1A1A;
+}
+
+.bit {
+  background: #0A0A0A;
+}
+
+.yuanjzhuang {
+  width: 100%;
+  height: 32rpx;
+  background-color: #0A0A0A;
+  padding-top: 10rpx;
+}
+
+.kusnr {
+  width: 100%;
+  height: 32rpx;
+  background-color: #1A1A1A;
+  border-radius: 40rpx 40rpx 0 0;
+}
+
+.tingmlm {
+  width: 690rpx;
+  padding-bottom: 30rpx;
+  border-bottom: 2rpx #2E2E2E solid;
+  margin-bottom: 40rpx;
+}
+
+.hanl1 {
+  width: 100%;
+  height: 40rpx;
+  display: flex;
+  padding-top: 20rpx;
+  padding-bottom: 18rpx;
+}
+
+.tcldimg {
+  width: 40rpx;
+  height: 40rpx;
+  display: block;
+  margin-right: 20rpx;
+}
+
+.dialmz {
+  width: 480rpx;
+  line-height: 40rpx;
+  font-size: 32rpx;
+  color: #E1E1E1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+}
+
+.sdalkr {
+  flex: 1;
+  font-size: 26rpx;
+  color: #FFBE11;
+  text-align: right;
+}
+.hanl2{
+  font-size: 28rpx;
+  color: #8C8C8C;
+}

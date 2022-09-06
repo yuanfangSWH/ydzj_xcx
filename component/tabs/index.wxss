@@ -1,0 +1,30 @@
+.weui-tabs {
+	width: 100%;
+}
+
+.weui-tabs-bar__wrp {
+	width: 100%;
+	background: #1a1a1a;
+}
+
+.weui-tabs-bar__content {
+  display:flex;
+  justify-content:space-between;
+	padding:50rpx 36rpx 36rpx 36rpx !important;
+}
+
+.weui-tabs-bar__item {
+	display: inline-block
+}
+
+.weui-tabs-bar__title {
+	display: inline-block;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+  border-bottom-color: transparent;
+  padding-bottom:32rpx;
+  font-size: 32rpx;
+}
+.weui-tabs-swiper{
+	height: 100vh;
+}

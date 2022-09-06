@@ -1,0 +1,56 @@
+/* pages/my/customer/index.wxss */
+.customer-img{
+  margin-top:100rpx;
+  text-align: center;
+}
+.customer-img .img{
+  width: 451rpx;
+  height: 287rpx;
+}
+.customer-info{
+  margin-left:96rpx;
+  margin-right:96rpx;
+  margin-bottom:96rpx;
+  text-align: center;
+  border: 2rpx dashed #444444;
+  background: #1a1a1a;
+  border-radius: 22px;
+  padding:40rpx 58rpx 40rpx 58rpx;
+}
+.customer-info .title{
+  font-size: 32rpx;
+  font-weight: 400;
+  text-align: center;
+  color: #e1e1e1;
+  line-height: 30rpx;
+}
+.customer-info .sub-title{
+  margin-top:10rpx;
+  font-size: 26rpx;
+  font-weight: 400;
+  text-align: center;
+  color: #8c8c8c;
+  line-height: 30rpx;
+  letter-spacing: 3rpx;
+}
+.btn{
+  width: 560rpx;
+  height: 80rpx;
+  opacity: 1;
+  background: #ffbe11;
+  border-radius: 40rpx;
+  font-size: 34rpx;
+  color: #0a0a0a;
+  margin-bottom:20rpx;
+}
+
+.cover-view {
+  position: absolute;
+  top: 0rpx;
+  left: 0rpx;
+  background: rgba(0,0,0, 0.7);
+  width: 100%;
+  height: 100%;
+  color:#fff;
+  /* opacity: .7; */
+}

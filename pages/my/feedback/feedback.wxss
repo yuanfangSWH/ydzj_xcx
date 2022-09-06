@@ -1,0 +1,98 @@
+page {
+  background-color: #1A1A1A;
+}
+
+.bit {
+  background: #0A0A0A;
+}
+
+.yuanjzhuang {
+  width: 100%;
+  height: 32rpx;
+  background-color: #0A0A0A;
+  padding-top: 10rpx;
+}
+
+.kusnr {
+  width: 100%;
+  height: 32rpx;
+  background-color: #1A1A1A;
+  border-radius: 40rpx 40rpx 0 0;
+}
+.feed-back{
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  background: #1a1a1a;
+  border-radius: 40rpx 40rpx 0rpx 0rpx;
+  padding:0rpx;
+  color:#fff;
+}
+.feed-title{
+  margin-left:32rpx;
+  font-size: 32rpx;
+  font-weight: 400;
+  text-align: left;
+  color: #fff;
+}
+.feed-content{
+  width:auto;
+  height: 400rpx;
+  margin:32rpx 32rpx 0rpx 32rpx;
+  padding:32rpx;
+  background: #2e2e2e;
+  color: #8c8c8c;
+  border-radius: 12rpx 12rpx 0 0;
+}
+.shiyufen{
+  width:auto;
+  height: 70rpx;
+  margin:0rpx 32rpx 0rpx 32rpx;
+  padding:0 32rpx 0 32rpx;
+  background: #2e2e2e;
+  text-align: right;
+  border-radius: 0 0 12rpx 12rpx;
+}
+.feed-uploader{
+  margin:32rpx 32rpx 0rpx 32rpx;
+  display:flex;
+  
+}
+.feed-uploader .uploader,.feed-uploader .img-box{
+  width:162rpx;
+  height:162rpx;
+  margin-right:12rpx;
+  position: relative;
+}
+.feed-uploader .img-box .img{
+  width:162rpx;
+  height:162rpx;
+}
+.feed-uploader .img-box .img-remove{
+  width:36rpx;
+  height:36rpx;
+  position: absolute;
+  top:0rpx;
+  right:0rpx;
+}
+.feed-tips{
+  margin:32rpx 32rpx 0rpx 32rpx;
+  font-size: 26rpx;
+  font-weight: 400;
+  text-align: left;
+  color: #8c8c8c;
+  line-height: 40rpx;
+}
+.btn{
+  position: absolute;
+  left:32rpx;
+  bottom:32rpx;
+  width: 686rpx !important;
+  height: 88rpx;
+  opacity: 1;
+  background: #ffbe11;
+  border-radius: 20rpx;
+  font-size: 34rpx;
+  color: #0a0a0a;
+  line-height: 58rpx;
+}

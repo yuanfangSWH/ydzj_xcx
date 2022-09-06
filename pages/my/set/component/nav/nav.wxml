@@ -1,0 +1,10 @@
+<!--pages/my/set/component/nav.wxml-->
+<view>
+  <topMOD></topMOD>
+  <view class="bit">
+    <view class="page-title">
+      {{title}}
+      <image class="return" src="/images/back.png" bindtap="return"></image>
+    </view>
+  </view>
+</view>

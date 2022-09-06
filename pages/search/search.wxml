@@ -1,0 +1,16 @@
+<!--pages/search/search.wxml-->
+<topMOD></topMOD>
+<view class="search">
+  <image class="return" src="../../images/back.png" bindtap="return"></image>
+  <view class="shourq">
+    <image class="shous" src="../../images/luigjss.png"></image>
+    <input class="weui-input" confirm-type="search" focus="true" placeholder="搜索商家名称或关键字" bindconfirm="searchF" value="{{searchData}}" />
+  </view>
+</view>
+<view class="shoulishi middle">
+  <view class="xinshi">搜索历史</view>
+  <image class="lajton" src="../../images/ljttb.png" bindtap="qklsF"></image>
+</view>
+<view class="yonlie middle">
+  <view class="zhelis" wx:for="{{historyData}}" wx:key="index" data-value="{{item}}" bindtap="historyTZ" >{{item}}</view>
+</view>

@@ -1,0 +1,10 @@
+<!--pages/pay/results/results.wxml-->
+<topMOD colorData="{{colorData}}"></topMOD>
+<view class="bit">
+  <image class="return" src="../../../images/back.png" bindtap="return"></image>
+  <view class="juzwenz">提交预订</view>
+</view>
+<view class="yuanjzhuang">
+  <view class="kusnr"></view>
+</view>
+

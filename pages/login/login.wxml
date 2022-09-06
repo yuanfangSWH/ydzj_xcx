@@ -1,0 +1,7 @@
+<!--pages/login.wxml-->
+<view>
+  <image class="enjoy" src="../../images/dlbjing.png"></image>
+  <image class="smile1" src="../../images/dljbin.png"></image>
+  <image class="smile2" src="../../images/dlibzl.png"></image>
+  <view class="buttoncss"><button wx:if="{{location}}" open-type="openSetting">打开定位功能</button></view>
+</view>

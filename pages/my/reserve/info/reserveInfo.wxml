@@ -1,0 +1,47 @@
+<!--pages/my/reserve/info/reserveInfo.wxml-->
+<topMOD></topMOD>
+<view class="bit">
+  <image class="return" src="../../../../images/back.png" bindtap="return"></image>
+</view>
+<view class="page-view">
+  <view class="page-panel">
+    <view class="title-icon">
+      <image class="icon" src="../../../../images/dincl.png"></image>
+      <view class="title">
+        <text wx:if="{{reserveInfo.status_type==1}}">预约中</text>
+        <text wx:if="{{reserveInfo.status_type==2}}">已预约</text>
+        <text wx:if="{{reserveInfo.status_type==3}}">已取消</text>
+        <text wx:if="{{reserveInfo.status_type==4}}">预定失败</text>
+        <text wx:if="{{reserveInfo.status_type==5}}">预定完成</text>
+      </view>
+    </view>
+
+    <view class="title-name">
+      <view class="title">{{reserveInfo.shop_name}}</view>
+      <image class="icon" src="../../../../images/Path.png"></image>
+    </view>
+  </view>
+
+  <view class="page-panel">
+    <view class="info-item content-panel">
+      <view class="p">预订位置：{{reserveInfo.place_type_name}} ({{reserveInfo.place.place_type.min_people_num}}-{{reserveInfo.place.place_type.max_people_num}}人)</view>
+      <view class="p">预订金额：￥{{reserveInfo.total_deposit}}</view>
+      <view class="p">预订时间：{{reserveInfo.reserve_time}}</view>
+    </view>
+    <view class="info-item content-panel">
+      <view class="content-title">预订信息</view>
+      <view class="p">预订号码：{{reserveInfo.order_no}}</view>
+      <view class="p">联系人：{{reserveInfo.name}}</view>
+      <view class="p">联系电话：{{reserveInfo.phone}}</view>
+      <view class="p">下单时间：{{reserveInfo.create_time}}</view>
+      <view class="p">预订方式：{{reserveInfo.reserve_way==0?'线下':reserveInfo.reserve_way==1?'线上':'线上客服'}}</view>
+      <view class="p">其他备注：{{reserveInfo.remark}}</view>
+    </view>
+  </view>
+  <view class="page-footer">
+    <button wx:if="{{reserveInfo.status_type==1||reserveInfo.status_type==2}}" class="btn-line btn" plain bindtap="handleReserveCancel">取消订单</button>
+    <button wx:if="{{reserveInfo.status_type!=1&&reserveInfo.status_type!=2}}" class="btn-line btn" plain  bindtap="scdd" >删除订单</button>
+    <!-- <button class="btn-block btn" data-row="{{reserveInfo}}" open-type="contact">联系预订专员</button> -->
+  </view>
+  <reserve-cancel active="{{isShowReserveCancel}}" bind:selected="reserveCancelOk" bind:closed="reserveCancelClosed"></reserve-cancel>
+</view>

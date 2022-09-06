@@ -1,0 +1,22 @@
+<topMOD colorData="{{colorData}}"></topMOD>
+<view class="bit">
+  <image class="return" src="../../../images/back.png" bindtap="return"></image>
+</view>
+<view class="yuanjzhuang">
+  <view class="kusnr"></view>
+</view>
+<view class="feed-back">
+  <view class="feed-title">意见详情描述（必填）</view>
+  <textarea maxlength="200" class="feed-content" placeholder="请输入您的意见"  model:value="{{desc}}" />
+  <view class="shiyufen">{{desc.length}}/200</view>
+  <view class="feed-title" style="margin-top:40rpx;">图片上传 (选填)</view>
+  <view class="feed-uploader">
+    <image wx:if="{{imageList.length<4}}" class="uploader" src="../../../images/uploader.png" bindtap="uploadImg"></image>
+    <view wx:for="{{imageList}}" wx:key="index" data-index="{{index}}" data-value="{{item}}" wx:for-index="index" class="img-box">
+      <image class="img" src="{{item}}"></image>
+      <image class="img-remove" data-index="{{index}}" data-value="{{item}}" bindtap="removeImg" src="../../../images/close.png"></image>
+    </view>
+  </view>
+  <view class="feed-tips"><span style="color:#FFBE11">*</span> 温馨提示：提供问题相关截图以便我们更好的为您解决问题</view>
+  <button class="btn" bindtap="submit">提交</button>
+</view>

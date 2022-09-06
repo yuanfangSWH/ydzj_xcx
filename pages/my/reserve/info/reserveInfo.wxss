@@ -1,0 +1,88 @@
+/* pages/my/reserve/info/reserveInfo.wxss */
+/* page {
+  background-color: #1a1a1a !important;
+} */
+.fix-box {
+  position: fixed;
+  width: 100vw;
+  z-index: 999;
+}
+.page-view {
+  top: 0rpx;
+  left: 0rpx;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  background: #1a1a1a;
+  border-radius: 40rpx 40rpx 0rpx 0rpx;
+  padding: 0rpx 0rpx 50% 0rpx;
+  color: #fff;
+  padding-top:40rpx;
+}
+.page-panel{
+  background: #1a1a1a;
+  /* display: flex;
+  justify-content: space-between; */
+  padding:20rpx 32rpx 0rpx 32rpx;
+}
+.title-icon{
+  display: flex;
+  font-size: 32rpx;
+}
+.title-icon .icon{
+  width: 32rpx;
+  height: 32rpx;
+  padding: 10rpx 10rpx 0rpx 0rpx;
+}
+.title-icon .title{
+  font-size:32rpx;
+  color: #ffbe11;
+}
+.title-name{
+  margin-top:58rpx;
+  display: flex;
+  justify-content: space-between;
+  font-size: 38rpx;
+  color:#fff;
+}
+.title-name .icon{
+  padding-top:16rpx;
+  padding-bottom:43rpx;
+  width: 16rpx;
+  height: 30rpx;
+}
+.content-panel{
+  padding-top:51rpx;
+  padding-bottom:53rpx;
+  border-top:2px solid #2e2e2e;
+}
+.content-panel .p{
+  margin-bottom: 18rpx;
+}
+.content-panel .content-title{
+  font-size:32rpx;
+  color:#fff;
+  line-height: 34rpx;
+  margin-bottom: 20rpx;
+}
+.info-item{
+  font-size:28rpx;
+  color: #b8b8b8;
+  line-height: 48rpx;
+}
+.page-footer{
+  background: #212121;
+  border-top: 2px solid #2e2e2e;
+  position: absolute;
+  position: fixed;
+  width: 100vw;
+  bottom: 0rpx;
+  display: flex;
+  justify-content: flex-end;
+}
+.page-footer .btn{
+  font-weight: 400;
+  color: #0a0a0a;
+  font-size: 30rpx;
+  margin:32rpx 32rpx 32rpx 0rpx !important;
+}

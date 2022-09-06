@@ -1,0 +1,32 @@
+<!--pages/details/information/information.wxml-->
+<topMOD></topMOD>
+<view class="bit">
+  <image class="return" src="../../../images/back.png" bindtap="return"></image>
+  <view class="juzwenz">商户信息</view>
+</view>
+<view class="weihnmk">
+  <view class="gunygui middle">
+    <view class="lrjns1">
+      <image class="shhnximg" src="../../../images/shhnx1.png"></image>
+      <view>营业时间</view>
+    </view>
+    <view class="lrjns2"><text wx:if="{{shop.business_start_time!='00:00'||shop.business_stop_time!='00:00'}}">{{shop.business_start_time}} - 次日{{shop.business_stop_time}}</text><text wx:if="{{shop.business_start_time=='00:00'&&shop.business_stop_time=='00:00'}}">24小时营业</text></view>
+  </view>
+</view>
+
+<view class="weihnmk" wx:for="{{tags}}" wx:key="index">
+  <view class="gunygui middle">
+    <view class="lrjns1">
+      <image class="shhnximg" wx:if="{{item.icon}}" src="{{item.icon}}"></image>
+      <view style="height:42rpx;margin-left:30rpx" wx:if="{{!item.icon}}"></view>
+      <view>{{item.group}}</view>
+    </view>
+    <view class="lrjns2">
+      <div class="sheizgx" wx:for="{{item.tags}}" wx:key="index">
+        <image class="xxgzgimg" wx:if="{{item.icon}}" src="{{item.icon}}"></image>
+        {{item.name}}
+      </div>
+    </view>
+  </view>
+</view>
+

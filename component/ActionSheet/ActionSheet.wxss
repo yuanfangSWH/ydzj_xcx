@@ -1,0 +1,71 @@
+/* component/ActionSheet.wxss */
+.cover-view {
+  position: absolute;
+  top: 0rpx;
+  left: 0rpx;
+  background: rgba(0,0,0, 0.7);
+  width: 100%;
+  height: 100%;
+  color:#fff;
+  z-index:9999;
+  /* opacity: .7; */
+}
+.cover-view .ctrl{
+  padding:57rpx 40rpx 57rpx 40rpx;
+  display: flex;
+  justify-content:space-between;
+}
+.cover-view .items{
+  position: absolute;
+  width:100%;
+  bottom:0rpx;
+  background: #1a1a1a;
+  border-radius: 40rpx 40rpx 0rpx 0rpx;
+}
+.cover-view .items .item-list{
+  background-color: #1a1a1a !important;
+  height: 400rpx;
+  width:100%;
+}
+.cover-view .ctrl .btn-cancel,.cover-view .ctrl .btn-ok{
+  font-size: 32rpx;
+  font-weight: 400;
+  text-align: center;
+}
+.cover-view .items .item-select-box{
+  
+}
+.item-select-mask{
+  /* background: none !important; */
+  background: rgb(26,26,26);
+  background: linear-gradient(0deg, rgba(26,26,26,1) 0%,
+                              rgba(121,255,250,0) 45%,
+                              rgba(121,255,250,0) 45%,
+                              rgba(26,26,26,1) 100%);
+  background-size: 750px 300px !important;
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: 9;
+}
+
+.cover-view .items .aitem{
+  text-align: center;
+  font-size:33rpx;
+}
+
+.cover-view .ctrl .btn-ok{
+  color: #ffbe11;
+}
+.cover-view .items .item{
+  padding:40rpx;
+  color: #e1e1e1;
+  text-align: left;
+  font-size: 34rpx;
+  display: flex;
+  justify-content:space-between;
+}
+.cover-view .items .item .item-check{
+  width: 26rpx;
+  height: 26rpx;
+  padding:10rpx;
+}

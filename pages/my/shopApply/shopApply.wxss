@@ -1,0 +1,84 @@
+/* pages/my/shopApply/index.wxss */
+page {
+  background-color: #1A1A1A;
+}
+
+.bit {
+  background: #0A0A0A;
+}
+
+.yuanjzhuang {
+  width: 100%;
+  height: 32rpx;
+  background-color: #0A0A0A;
+  padding-top: 10rpx;
+}
+
+.kusnr {
+  width: 100%;
+  height: 32rpx;
+  background-color: #1A1A1A;
+  border-radius: 40rpx 40rpx 0 0;
+}
+.shop-apply{
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  background: #1a1a1a;
+  border-radius: 40rpx 40rpx 0px 0px;
+  padding:0rpx 32rpx 0rpx 32rpx;
+  color:#fff;
+}
+.input-item{
+  color:#fff;
+  display:flex;
+  padding:26rpx 0rpx 26rpx 0rpx;
+  border-bottom: 2rpx solid #212121;
+}
+.input-item .label{
+  font-size: 32rpx;
+  font-weight: 400;
+  text-align: left;
+  color: #e1e1e1;
+}
+.input-item .input{
+  width:60%;
+  height: 40rpx;
+  padding: 2rpx 0rpx 2rpx 74rpx;
+  font-size: 28rpx;
+  font-weight: 400;
+  text-align: left;
+  color: #8c8c8c;
+}
+.check-item{
+  padding-top:50rpx;
+  display: flex;
+}
+.check-item .input-check{
+  width: 26rpx;
+  height:26rpx;
+  padding-top: 8rpx;
+}
+.check-item .input-check-info{
+  font-size:26rpx;
+  padding:0rpx 0rpx 0rpx 20rpx;
+  line-height: 40rpx;
+}
+.input-item .input-icon{
+  padding: 10rpx 0rpx 10rpx 16rpx;
+  width:16rpx;
+  height: 26rpx;
+}
+
+.btn{
+  position: absolute;
+  bottom:32rpx;
+  width: 686rpx !important;
+  height: 88rpx;
+  opacity: 1;
+  background: #ffbe11;
+  border-radius: 20rpx;
+  font-size: 34rpx;
+  color: #0a0a0a;
+  line-height: 58rpx;
+}

@@ -1,0 +1,4 @@
+/* component/topMOD/topMOD.wxss */
+.topcss{
+  width: 100%;
+}
